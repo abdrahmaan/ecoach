@@ -1,0 +1,23 @@
+header{
+    background-image: url('../../img/vpattren.png');
+    min-height: 90px;
+    position: relative;
+}
+
+header h3.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@media (min-width: 319px) and (max-width: 567px) {
+
+
+    header h3.title{
+       
+        font-size: 17px;
+    }
+    
+    
+}

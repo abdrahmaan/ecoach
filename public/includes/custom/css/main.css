@@ -1,0 +1,82 @@
+*{
+    z-index: 100;
+    user-select: none;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+label,h1,h2,h3,h4,h5,h6{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+body{
+
+
+    font-family: "Changa" , sans-serif;
+    overflow-x: hidden;
+    background-image: url("../../img/slide-1.jpg");
+    background-repeat: repeat-y;
+    position: relative;
+    
+}
+
+@media (min-width:760px) {
+    body{
+   
+
+    background-size: cover;
+
+}
+
+}
+
+
+@media (min-width: 319px) and (max-width: 992px) {
+
+    .data-info{
+        width: 100% !important;
+    }
+
+    .data-image{
+        width: 100% !important;
+    }
+
+    input{
+        min-width: 75% !important;
+    }
+    input[type="file"]{
+        min-width: 75% !important;
+    }
+
+    select{
+        min-width: 75% !important;
+    }
+
+    button.add-player{
+        min-width: 75% !important
+    }
+
+    
+}
+
+
+
+.form-control:focus{
+    box-shadow:  0px 0px 0px 0px transparent;
+    outline: 0px transparent;
+}
+
+.highlight{
+    content: "";
+    position: absolute;
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    height: 100%;
+    top: 90px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
