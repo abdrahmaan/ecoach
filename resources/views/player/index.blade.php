@@ -330,5 +330,6 @@
 @section('script')
     
 <script src="{{asset('includes/home/custom/js/players.js')}}"></script>
+
 @endsection
 

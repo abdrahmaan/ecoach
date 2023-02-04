@@ -24,7 +24,20 @@ class AuthController extends Controller
         if($user !== null){
 
           $request->session()->put('user-data', $user);
-          return redirect("/admin");
+          
+          
+          switch ($user->Role) {
+              case 'Admin':
+                return redirect("/admin");
+                break;
+                case 'Captin':
+                    return redirect("/admin/attendances/create");           
+                break;
+                case 'Accountant':
+                    return redirect("/admin");
+                break;
+          }
+          
 
         } else {
 
