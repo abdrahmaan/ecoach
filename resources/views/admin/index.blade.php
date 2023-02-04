@@ -4,10 +4,13 @@
 
     @section('title',"الإحصائيات")
 
-@isset($req)
-    {{dd($req)}}
-    {{-- {{print_r($req)}} --}}
-@endisset
+
+    @isset(session()->get('user')->Role)
+
+            <script>
+                window.localStorage.setItem('role', "{{session()->get('user')->Role}}");
+            </script>
+    @endisset
 
     @section('content')
         <h2 class="text-warning">Heloo</h2>

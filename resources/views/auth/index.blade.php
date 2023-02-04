@@ -31,7 +31,9 @@
 
 </section>
 
-
+<script>
+    window.localStorage.removeItem("role");
+</script>
     
 
 @endsection

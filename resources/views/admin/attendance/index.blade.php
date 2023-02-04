@@ -210,13 +210,17 @@
                 // console.log(player);
                 let playerHTML = `
                         <tr>
-                            <td>
-                                <form action="/admin/attendances/${player.id}" method="POST" class="d-inline">
+                            <td class="align-middle">
+                             ${ window.localStorage.getItem("role") !== null ?
+                                  ` 
+                                 <form action="/admin/attendances/${player.id}" method="POST" class="d-inline">
                                     @csrf
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }} 
                                     <button type="submit" data-c='{{$Group->id}}' class="btn btn-danger my-2">حذف</button>
                                 </form>
+                                
+                                `: "X" }
                             </td>
                             <td class="fs-5 align-middle">${player.created_at.split(":")[0].split("T")[0]}</td>
                             <td class="fs-5 align-middle">حضور</td>

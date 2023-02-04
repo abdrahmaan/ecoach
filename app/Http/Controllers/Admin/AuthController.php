@@ -28,7 +28,10 @@ class AuthController extends Controller
           
           switch ($user->Role) {
               case 'Admin':
-                return redirect("/admin");
+
+                $request->session()->flash('user',$user);
+                return redirect("/admin")->with('user', $user);
+                
                 break;
                 case 'Captin':
                     return redirect("/admin/attendances/create");           
