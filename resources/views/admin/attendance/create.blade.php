@@ -149,6 +149,16 @@
 
     function HandleSearch() {
 
+            // Prevent Counter And Button Attendance
+            let counterArea = document.querySelector("h3#counter-select");
+            let btnHdor = document.querySelector("button#btn-hdor");
+            let TextNames = document.querySelector("input#playernames");
+
+            counterArea.className.includes("d-none") ?  null : counterArea.classList.add("d-none") ;
+            btnHdor.className.includes("d-none") ? null : btnHdor.classList.add("d-none");
+            TextNames.value = "";
+
+            
             // Inputs & Selects
             let select = document.querySelectorAll("select");
             let inputPlayerName = document.querySelectorAll("input")[2].value;
@@ -182,7 +192,6 @@
 
             data.forEach(player => {  
 
-                console.log(inputPlayerName);
                 let playerHTML = `
                 <div class="player d-flex flex-column flex-lg-row bg-dark col-12 col-lg-5 p-0  mx-2 my-3 d-flex justify-content-center align-items-center" style="border-radius:25px">
                     
@@ -323,16 +332,18 @@
             }
 
 }
-    
+
+
 function HandleCheckBox(){
 
     let NamesArray = [];
 
-
     let checkboxes = document.querySelectorAll("input[type='checkbox']");
+    let TextNames = document.querySelector("input#playernames");
     let counter = document.querySelector("h3#counter-select");
     let btnHdor = document.querySelector("button#btn-hdor");
-    let TextNames = document.querySelector("input#playernames");
+
+
 
     checkboxes.forEach(checkbox => {
 
@@ -374,6 +385,8 @@ function HandleCheckBox(){
         })
     });
 }
+
+
 
 
     
