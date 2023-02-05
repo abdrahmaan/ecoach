@@ -140,7 +140,12 @@
               <button type="button" class="btn-close text-reset text-light bg-warning m-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <img src="/includes/img/user.png" style="max-width: 220px; margin: auto;" alt="">
-          <h4 class="username text-warning text-center my-3">Admin أهلاً بك</h4>
+          <h4 class="username text-warning text-center mt-3 fs-5">
+            .. أهلاً بك
+           <br>
+           {{session()->get('user-data')->FullName}}
+           </h4>
+           <h4 class="role text-warning text-center my-2 fs-5">{{session()->get('user-data')->Role}}</h4>
           <hr class="dropdown-divider bg-warning w-100 mx-auto" style="min-height: 2px;">
           <div class="offcanvas-body d-flex flex-column align-items-end px-0">
             {{-- Captin --}}
