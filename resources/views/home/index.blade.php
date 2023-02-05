@@ -80,13 +80,13 @@
 
         
         <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 300px">
-            <h3 class="text-center text-dark fw-bold my-4">- تابعنا بسهولة -</h3>
+            <h3 class="text-center text-success fw-bold my-4">- تابعنا بسهولة -</h3>
             
             <div class="icons d-flex justify-content-center align-items-center">
-                <a href=""><i id="icon-social"  class="bi bi-facebook mx-3 text-dark"></i></a>
-                <a href=""><i id="icon-social" class="bi bi-instagram mx-3 text-dark"></i></a>
-                <a href=""><i id="icon-social" class="bi bi-youtube mx-3 text-dark"></i></a>
-                <a href=""><i id="icon-social" class="bi bi-whatsapp mx-3 text-dark"></i></a>
+                <a href=""><i id="icon-social"  class="bi bi-facebook mx-3 text-success"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-instagram mx-3 text-success"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-youtube mx-3 text-success"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-whatsapp mx-3 text-success"></i></a>
             </div>
          
         </div>
