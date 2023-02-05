@@ -33,7 +33,7 @@
     </section>
 
 
-    <section class="services" style="min-height: 400px">
+    <section class="services py-4" style="min-height: 400px">
         <div class="container" style="min-height: 400px">
             <div class="row p-0 m-0 justify-content-center align-items-center" style="min-height: 400px">
                 <div class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
@@ -97,7 +97,7 @@
         }
 
         #image-hero{
-            border-radius: 6%;
+            border-radius:30% 70% 70% 30% / 30% 30% 70% 70%  ;
             box-shadow:  9px 9px 15px rgb(0 0 0 / 70%);
       
         }
@@ -106,12 +106,22 @@
             h2#title{
 
             font-size: 33px;
-        }
+            }
+            a.btn{
+                width: 75% !important;
+            }
+            a.btn{
+                width: 75% !important;
+            }
         h2#desc{
 
             font-size: 20px;
 
         }
+
+        #image-hero{
+            width: 120%;
+      
         }
     </style>
 
