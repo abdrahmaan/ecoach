@@ -27,7 +27,7 @@ class  Utilites {
                         </section>
                         <hr class="bg-light">
                         <section class="header-content flex-column d-flex justify-content-center align-items-center ">
-                            <h2 class="text-warning fs-1 pb-2">الحريف</h2>
+                            <h2 class="text-warning fs-1 pb-2">E-Coach</h2>
                             <ul class="nav d-flex flex-row-reverse">
                                 <li id="home" class="active px-4 my-3 fs-5"><a href="/home">
                                     الرئيسية
