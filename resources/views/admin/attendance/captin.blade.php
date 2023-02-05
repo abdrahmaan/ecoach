@@ -147,7 +147,7 @@
 <script>
 
 
-    fetch("http://ecoach.abdelrahmaanw/api/admin/attendance/captin")
+    fetch("http://ecoach.abdelrahmaan.com/api/admin/attendance/captin")
     .then(res => res.json())
     .then(res =>{
         console.log(res);

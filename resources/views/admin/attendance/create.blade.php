@@ -139,7 +139,7 @@
 <script>
 
 
-    fetch("http://ecoach.abdelrahmaan/api/admin/players")
+    fetch("http://ecoach.abdelrahmaan.com/api/admin/players")
     .then(res => res.json())
     .then(res =>{
 
