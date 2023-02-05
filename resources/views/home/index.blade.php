@@ -6,16 +6,18 @@
         <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 @endsection
    
-@section('content')
+@section('content') 
     <section class="hero">
         <div class="container pb-4" style="min-height: 430px">
             <div class="row justify-content-center align-items-center m-0 p-0" style="min-height: 430px">
-                <div class="col-lg-5 col-10 d-flex flex-column align-items-center">
+                <div data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" class="col-lg-5 col-10 d-flex flex-column align-items-center">
                     <img id="image-hero" src="/includes/img/banner4.jpg" width="100%" alt="">
                 </div>
-                <div class="col-lg-5 col-10 d-flex flex-column align-items-center">
+                <div data-aos="zoom-out" data-aos-duration="1000" class="col-lg-5 col-10 d-flex flex-column align-items-center">
                     <h2 id="title" class="text-center">
                         ! أكادميتنا مختلفة 
                         <br>
@@ -28,7 +30,7 @@
                      </h2>
                 </div>
             </div>
-            <a class="btn btn-light text-dark fw-bold w-25 mx-auto d-block" href="/players">شوف بنفسك</a>
+            <a class="btn btn-success text-light  w-25 mx-auto d-block" href="/players">شوف بنفسك</a>
         </div>
     </section>
 
@@ -36,21 +38,21 @@
     <section class="services py-4" style="min-height: 400px">
         <div class="container" style="min-height: 400px">
             <div class="row p-0 m-0 justify-content-center align-items-center" style="min-height: 400px">
-                <div class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
+                <div data-aos="zoom-in" data-aos-duration="1000"  class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/football.png" width="118px" alt="">
                     <h2 class="fw-bold fs-4">حضور وغياب اللاعبين</h2>
                     <p class="text-center fs-5">حضور وغياب اللاعبين إلكترونياً
                         وتحليل إنتظامة وكذلك 
                         ومتابعة حضور المدربين</p>
                 </div>
-                <div class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
+                <div data-aos="zoom-out" data-aos-duration="1000" class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/shoot.png" width="118px" alt="">
                     <h2 class="fw-bold fs-4 text-center">ملف شخصى لكل لاعب</h2>
                     <p class="text-center fs-5">ملف شخصى لكل لاعب يوضح
                         بياناته وتقييماته المهارية و البدنية
                         السابقة ويمكنه من متابعة نفسه</p>
                 </div>
-                <div class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
+                <div data-aos="zoom-in" data-aos-duration="1000"  class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/ball.png" width="118px" alt="">
                     <h2 class="fw-bold fs-4 text-center">دقه تقييمات المهارات</h2>
                     <p class="text-center fs-5">تقييم أداء اللاعب بالتفصيل
@@ -64,7 +66,7 @@
     </section>
 
     <section class="promotion py-3 bg-secondary" style="min-height: 340px">
-        <div class="container w-100 text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 340px">
+        <div data-aos="fade-left" data-aos-duration="1000" class="container w-100 text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 340px">
             <h2 class="title-promotion text-warning fs-1">
                 الكورة فى ملعبنا
             <br>
@@ -79,7 +81,7 @@
     <section class="social py-1 bg-light" style="min-height: 300px">
 
         
-        <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 300px">
+        <div data-aos="flip-left" data-aos-duration="1000" class="container p-0 d-flex flex-column justify-content-center align-items-center" style="min-height: 300px">
             <h3 class="text-center text-success fw-bold my-4">- تابعنا بسهولة -</h3>
             
             <div class="icons d-flex justify-content-center align-items-center">
@@ -93,10 +95,10 @@
     </section>
     <section class="form py-1 bg-dark" style="min-height: 400px">
 
-        <div class="container d-flex justify-content-center align-items-center" style="min-height: 400px">
+        <div data-aos="zoom-in" class="container d-flex justify-content-center align-items-center" style="min-height: 400px">
                 <div id="form-data" class="d-flex flex-column justify-content-center align-items-center">
                         <form action="">
-                            <h2 class="text-warning mb-4" style="font-size: 40px">! هنكلمك فى أسرع وقت</h2>
+                            <h2 class="text-warning mb-4 text-center" style="font-size: 30px">! هنكلمك فى أسرع وقت</h2>
                              <input class="form-control w-100 text-center mx-auto" placeholder="سيب رقم تيليفونك" type="text">
                             <button class="btn btn-success text-light mx-auto w-100 my-4">سجل رقمك</button>
                         </form>
@@ -181,7 +183,7 @@
         }
 
         i#icon-social{
-            font-size: 60px
+            font-size: 50px
         }
 
         section.form{
@@ -225,6 +227,8 @@
             width: 120%;
       
         }
+
+    }
     </style>
 
 @endsection
@@ -235,6 +239,9 @@
 @section('script')
     
 <script src="{{asset('includes/home/custom/js/home.js')}}"></script>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 @endsection
 
