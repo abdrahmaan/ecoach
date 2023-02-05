@@ -22,6 +22,37 @@
     
         <button type="submit" class="btn add-branch  btn-warning text-dark mt-4  w-25 mx-auto d-block">تسجيل الفرع</button>
     
-      </div></form>
+      </div>
+    </form>
+
+
+
+    
+<section class="table-area  mt-5 mx-auto w-75 d-flex justify-content-center align-items-center">
+
+  <table class="table table-bordered  table-dark w-100 text-center">
+    <thead>
+      <td>التعديلات</td>
+      <td>إسم الفرع</td>
+    </thead>
+    <tbody>
+      @isset($Branches)
+        @foreach ($Branches as $Branch)
+        <tr>
+          <td>
+            <form action="/admin/branches/{{$Branch->id}}" method="POST" class="d-inline">
+              @csrf
+              {{ csrf_field() }}
+              {{ method_field('DELETE') }} 
+                <button type="submit" data-c='{{$Branch->id}}' class="btn btn-danger my-2">حذف</button>
+            </form>
+          </td>
+          <td class="text-center align-middle">{{$Branch->BranchName}}</td>
+        </tr>
+        @endforeach
+      @endisset  
+    </tbody>
+  </table>
+ </section>
 
 @endsection

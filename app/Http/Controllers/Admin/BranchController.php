@@ -26,7 +26,10 @@ class BranchController extends Controller
      */
     public function create()
     {
-        return view("admin.branch.create");
+
+        $data = Branch::all();
+
+        return view("admin.branch.create")->with('Branches', $data);
     }
 
     /**
@@ -90,8 +93,12 @@ class BranchController extends Controller
      * @param  \App\Models\Branch  $branch
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Branch $branch)
+    public function destroy($id)
     {
-        //
+       
+       $delete = Branch::where("id", $id)->delete();
+
+        session()->flash("message","yes");
+        return redirect('/admin/branches/create');
     }
 }
