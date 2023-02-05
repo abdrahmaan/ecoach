@@ -63,13 +63,62 @@
         </div>
     </section>
 
+    <section class="promotion py-3 bg-secondary" style="min-height: 340px">
+        <div class="container w-100 text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 340px">
+            <h2 class="title-promotion text-warning fs-1">
+                الكورة فى ملعبنا
+            <br>
+            !وملعبنا فالجون
+            </h2>
+            <p class="data-promotion text-light fs-4">بعد إشتراكك بنهتم بمستواك و نحلله عن طريق تسجيل تقييم خاص بيك بيحتوى 
+                !على تقييم ( بدنى  - مهارى ) نوصل لأهم نقاط فيك تخرج لعيب محصلش </p>
+        </div>
+    </section>
+
+
+    <section class="social py-1 bg-light" style="min-height: 300px">
+
+        
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="min-height: 300px">
+            <h3 class="text-center text-dark fw-bold my-4">- تابعنا بسهولة -</h3>
+            
+            <div class="icons d-flex justify-content-center align-items-center">
+                <a href=""><i id="icon-social"  class="bi bi-facebook mx-3 text-dark"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-instagram mx-3 text-dark"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-youtube mx-3 text-dark"></i></a>
+                <a href=""><i id="icon-social" class="bi bi-whatsapp mx-3 text-dark"></i></a>
+            </div>
+         
+        </div>
+    </section>
+    <section class="form py-1 bg-dark" style="min-height: 400px">
+
+        <div class="container d-flex justify-content-center align-items-center" style="min-height: 400px">
+                <div id="form-data" class="d-flex flex-column justify-content-center align-items-center">
+                        <form action="">
+                            <h2 class="text-warning mb-4" style="font-size: 40px">! هنكلمك فى أسرع وقت</h2>
+                             <input class="form-control w-100 text-center mx-auto" placeholder="سيب رقم تيليفونك" type="text">
+                            <button class="btn btn-success text-light mx-auto w-100 my-4">سجل رقمك</button>
+                        </form>
+                </div>
+
+               
+
+        </div>
+    </section>
+
 
     <style>
+
+        *{
+            user-select: none;
+        }
         section.hero{
             min-height: 430px;
             background-image: url('/includes/img/banner5.jpg');
             background-position: center center;
             position: relative;
+            background-attachment: fixed;
         }
         section.hero::before{
             content: "";
@@ -102,6 +151,59 @@
       
         }
 
+        section.promotion{
+        background-image: url('/includes/img/banner6.jpg');
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
+
+
+        }  
+        
+        section.promotion::before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0 0 0 / 64%);
+            top: 0;
+            right: 0;
+
+            position: absolute;
+        }
+
+        h2.title-promotion{
+           text-shadow:  3px 0px 3px rgb(0 0 0 / 70%);
+        }
+        p.data-promotion{
+            max-width: 600px;
+            text-shadow: 3px 0px 3px rgb(0 0 0 / 70%);
+        }
+
+        i#icon-social{
+            font-size: 60px
+        }
+
+        section.form{
+        background-image: url('/includes/img/banner2.jpg');
+        background-position: center center;
+        background-size: cover;
+        position: relative;
+        background-attachment: fixed;
+
+        } 
+          
+        section.form::before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0 0 0 / 71%);
+            top: 0;
+            right: 0;
+
+            position: absolute;
+        } 
+        
         @media(min-width: 319px) and (max-width: 720px){
             h2#title{
 
