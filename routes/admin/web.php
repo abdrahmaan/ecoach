@@ -36,6 +36,9 @@ Route::prefix("admin")->middleware('auth')->group(function (){
 
     // Accountant Routes Access
     Route::middleware('accountant')->group(function(){
+        
+        Route::resource('payments', 'App\Http\Controllers\Admin\PaymentController');
+        Route::get('payments/create/{id}', 'App\Http\Controllers\Admin\PaymentController@create');
 
     });
 

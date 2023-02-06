@@ -385,7 +385,12 @@
                         <a href="/admin/toggleactive/${player.Status}/${player.id}" class="${ player.Status == "Active" ? 'btn btn-danger mt-3 col-5 mx-2' : 'btn btn-success mt-3 col-5 mx-2' }">
                             ${ player.Status == "Active" ? 'تعطيل' : 'تفعيل' }
                             <i class="bi bi-skip-start-fill"></i>
-                        </a></div>
+                        </a>
+                        </div>
+                        <a href="/admin/payments/create/${player.id}" class="btn btn-success mt-3 col-2" style="height: fit-content; white-space: nowrap; width:fit-content">
+                            دفع إشتراك
+                            <i class="bi bi-coin"></i>
+                        </a>
                        
                         </div>
                     </div>
