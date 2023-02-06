@@ -37,7 +37,7 @@ class AuthController extends Controller
                     return redirect("/admin/attendances/create");           
                 break;
                 case 'Accountant':
-                    return redirect("/admin");
+                    return redirect("/admin/payments");
                 break;
           }
           

@@ -39,6 +39,7 @@ Route::prefix("admin")->middleware('auth')->group(function (){
         
         Route::resource('payments', 'App\Http\Controllers\Admin\PaymentController');
         Route::get('payments/create/{id}', 'App\Http\Controllers\Admin\PaymentController@create');
+        Route::resource('payouts', 'App\Http\Controllers\Admin\PayoutController');
 
     });
 
