@@ -70,11 +70,7 @@
                     <i class="bi bi-currency-dollar"></i>
                   </button>
                   <ul class="dropdown-menu w-100 position-relative text-end rounded-0" style="background-color: #161819;">
-                    <li><a class="dropdown-item text-light" href="newpayment.html">
-                      تسجيل إشتراك لاعب
-                        <i class="bi bi-coin mx-1"></i>
-                      </a></li>
-                    <li><a class="dropdown-item text-light" href="#">
+                    <li><a class="dropdown-item text-light" href="/admin/payments">
                         مراجعة الإشتراكات
                         <i class="bi bi-table mx-1"></i>
                       </a></li>
@@ -187,11 +183,7 @@
                   <i class="bi bi-currency-dollar"></i>
                 </button>
                 <ul class="dropdown-menu w-100 position-relative text-end rounded-0" style="background-color: #161819;">
-                  <li><a class="dropdown-item text-light" href="newpayment.html">
-                    تسجيل إشتراك لاعب
-                      <i class="bi bi-coin mx-1"></i>
-                    </a></li>
-                  <li><a class="dropdown-item text-light" href="#">
+                  <li><a class="dropdown-item text-light" href="/admin/payments">
                       مراجعة الإشتراكات
                       <i class="bi bi-table mx-1"></i>
                     </a></li>
