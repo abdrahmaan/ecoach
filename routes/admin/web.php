@@ -77,7 +77,7 @@ Route::middleware('user')->group(function () {
     // Login
     Route::get("/login", [AuthController::class, "LoginPage"]);
     Route::post("/login", [AuthController::class, "LoginLogic"]);
-    Route::view("/players","player.index");
+    Route::view("/players","player.index")->middleware('no-cache');
     Route::view("/home","home.index");
 
 

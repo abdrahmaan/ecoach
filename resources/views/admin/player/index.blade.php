@@ -278,7 +278,7 @@
 <script>
 
 
-    fetch("https://ecoach.abdelrahmaan.com/api/admin/players")
+    fetch("http://ecoach.egy/api/admin/players")
     .then(res => res.json())
     .then(res =>{
 
