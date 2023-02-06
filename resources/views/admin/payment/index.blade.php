@@ -111,8 +111,9 @@
             let PlayerInputFilter = false;
 
 
-            // Counter
+            // Counter & Total Amount
             let counter = 0;
+            let TotalAmount = 0;
 
             let DefaultImagepath ='/includes/img/bg-section.jpg';
 
@@ -216,6 +217,10 @@
                     // Plus Counter
                     counter += 1;
 
+                    // Plus Total
+
+                    TotalAmount += Number(payment.Amount);
+
                     // Render Player
                     Area.innerHTML += paymentHTML;
 
@@ -236,7 +241,19 @@
                 
                 
             } else {
-                
+                 TotalHTML = `
+                 <tr>
+                    <td class="fs-5 align-middle" style='direction: rtl' colspan=3>${TotalAmount} جنية</td>
+                    <td class="fs-5 align-middle" colspan=3>المجموع</td>
+                    </tr>
+                    <tr>
+                    <td class="fs-5 align-middle" colspan=3>${counter}</td>
+                    <td class="fs-5 align-middle" colspan=3>عدد الدفع</td>
+                </tr>
+                    `;
+
+
+                Area.innerHTML += TotalHTML;
                 Area.className.includes("d-none") ? Area.classList.remove("d-none") : null;
                 counterHTML.innerHTML = `عدد اللاعبين : ${counter}`;
                 counterHTML.className.includes("d-none") ? counterHTML.classList.remove("d-none") :null;
