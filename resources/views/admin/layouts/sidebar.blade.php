@@ -83,11 +83,11 @@
                     <i class="bi bi-currency-dollar"></i>
                   </button>
                   <ul class="dropdown-menu w-100 position-relative text-end rounded-0" style="background-color: #161819;">
-                    <li><a class="dropdown-item text-light" href="newpayout.html">
+                    <li><a class="dropdown-item text-light" href="/admin/payouts/create">
                         تسجيل مصروف
                         <i class="bi bi-coin mx-1"></i>
                       </a></li>
-                    <li><a class="dropdown-item text-light" href="#">
+                    <li><a class="dropdown-item text-light" href="/admin/payouts">
                         مراجعة المصروفات
                         <i class="bi bi-table mx-1"></i>
                       </a></li>
@@ -196,11 +196,11 @@
                       <i class="bi bi-currency-dollar"></i>
                     </button>
                     <ul class="dropdown-menu w-100 position-relative text-end rounded-0" style="background-color: #161819;">
-                      <li><a class="dropdown-item text-light" href="newpayout.html">
+                      <li><a class="dropdown-item text-light" href="/admin/payouts/create">
                           تسجيل مصروف
                           <i class="bi bi-coin mx-1"></i>
                         </a></li>
-                      <li><a class="dropdown-item text-light" href="#">
+                      <li><a class="dropdown-item text-light" href="/admin/payouts">
                           مراجعة المصروفات
                           <i class="bi bi-table mx-1"></i>
                         </a></li>
