@@ -212,8 +212,14 @@
 
             if(counter < 1){
 
+                Swal.fire({
+                icon: "info",
+                title: "لا يوجد بيانات",
+                confirmButtonText: "رجوع",
+                 confirmButtonColor: "#e01a22",
+            })
                 Area.innerHTML = "";
-                Area.className.includes("d-none") ? null : Area.classList.add("d-none");
+                // Area.className.includes("d-none") ? null : Area.classList.add("d-none");
                 counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
                 console.log("no Data Found");
                 

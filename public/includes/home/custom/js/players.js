@@ -85,6 +85,12 @@ btn.addEventListener("click",(e)=>{
 
     }  else {
 
+        Swal.fire({
+            icon: "info",
+            title: "لا يوجد بيانات",
+            confirmButtonText: "رجوع",
+             confirmButtonColor: "#e01a22",
+        })
         Area.className.includes("d-none") ?  null : Area.classList.remove("d-none") ; 
         
     }
