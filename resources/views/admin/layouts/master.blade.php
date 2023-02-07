@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500&display=swap" rel="stylesheet">
     @yield('css')
+    <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
 
     <title>@yield('title')</title>
 </head>
@@ -44,7 +45,6 @@
        <span class="highlight"></span>
        
        
-       <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
        
        
        @if(session()->has('message')){
