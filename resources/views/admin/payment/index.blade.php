@@ -182,7 +182,7 @@
                     BranchNameFilter = true;
 
                 } else {
-                    if(selectBranch == payment.BranchName){
+                    if(selectBranch == payment.Branch){
                         BranchNameFilter = true;
                     } else {
 
@@ -236,7 +236,7 @@
 
                 Area.innerHTML = "";
                 Area.className.includes("d-none") ? null : Area.classList.add("d-none");
-                counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
+                // counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
                 console.log("no Data Found");
                 
                 
@@ -255,8 +255,8 @@
 
                 Area.innerHTML += TotalHTML;
                 Area.className.includes("d-none") ? Area.classList.remove("d-none") : null;
-                counterHTML.innerHTML = `عدد اللاعبين : ${counter}`;
-                counterHTML.className.includes("d-none") ? counterHTML.classList.remove("d-none") :null;
+                // counterHTML.innerHTML = `عدد اللاعبين : ${counter}`;
+                // counterHTML.className.includes("d-none") ? counterHTML.classList.remove("d-none") :null;
             }
 
 }
