@@ -10,6 +10,11 @@
   @csrf
   @method("post")
 
+  
+{{-- Hidden Input Skils --}}
+  <input id="myinput" hidden class="form-control" name="Skills" type="text" value="">
+
+
 <h3 class="text-warning text-center my-2">إسم اللاعب</h3>
 <input id="playername" readonly name="PlayerName" class="form-control w-25 mx-auto text-center" value="{{$Player->PlayerName}}" type="text" placeholder="إسم اللاعب">
 
@@ -347,7 +352,6 @@
     </div>
 
 
-    <input id="myinput" hidden class="form-control" name="Skills" type="text" value="">
     <button type="submit" class="btn add-player btn-warning text-dark mt-4  w-25 mx-auto d-block">تسجيل البيانات</button>
     
     </form>

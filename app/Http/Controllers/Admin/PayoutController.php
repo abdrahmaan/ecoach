@@ -51,7 +51,24 @@ class PayoutController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+
+        
+        $request->validate([
+            'Desc' => 'required|regex:/[ء-ي\s]/',
+            'Type' => 'required',
+            'Amount'=> 'required|numeric',
+            'Branch' => 'required',
+        ],[
+            'Desc.required' => 'من فضلك ادخل البيان',
+            'Desc.regex' => 'من فضلك ادخل البيان بالعربية',
+            'Type.required' => 'من فضلك أدخل النوع',
+            'Amount.required' => 'من فضلك أدخل القيمة',
+            'Amount.numeric' => 'من فضلك أدخل القيمة بالأرقام',
+            'Branch.required' => 'من فضلك أدخل الفرع',
+
+        ]);
+
 
              $insert =  Payout::create([
                 'Desc' => $request->Desc,
@@ -62,7 +79,7 @@ class PayoutController extends Controller
 
                 ]);
                 $insert->save();
-                session()->flash("message","done");
+                session()->flash("message","تم تسجيل المصروف بنجاح");
                 return redirect("/admin/payouts/create");
     }
 
@@ -110,7 +127,7 @@ class PayoutController extends Controller
     {
         Payout::where("id",$id)->delete();
 
-        session()->flash("message","done");
+        session()->flash("message","تم حذف المصروف بنجاح");
         return redirect("/admin/payouts");
     }
 }

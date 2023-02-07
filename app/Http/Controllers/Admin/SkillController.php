@@ -52,9 +52,16 @@ class SkillController extends Controller
     public function store(Request $request)
     {
 
+
+        $request->validate([
+            'Skills' => 'required'
+        ],[
+            'Skills.required' => 'من فضلك أدخل المهارات'
+        ]);
+
       $add = Skill::create($request->all());
       $add->save();
-      $request->session()->flash("message","done");
+      $request->session()->flash("message","تم تسجيل المهارة بنجاح");
       return redirect("/admin/players");
 
     }

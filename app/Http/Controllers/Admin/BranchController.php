@@ -48,7 +48,7 @@ class BranchController extends Controller
 
         $insert->save();
 
-        return redirect('/admin/branches/create')->with("message","yes");
+        return redirect('/admin/branches/create')->with("message","تم إضافة الفرع بنجاح");
 
 
     }
@@ -98,7 +98,7 @@ class BranchController extends Controller
        
        $delete = Branch::where("id", $id)->delete();
 
-        session()->flash("message","yes");
+        session()->flash("message","تم حذف الفرع بنجاح");
         return redirect('/admin/branches/create');
     }
 }

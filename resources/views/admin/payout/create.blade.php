@@ -26,7 +26,7 @@
             
            <section class="data-input my-2 w-100">
             <h2 class="text-center text-warning mb-3">البيان</h2>
-            <textarea class="form-control w-25 mx-auto text-center" name="Desc" id="" cols="" placeholder="إكتب البيان" rows="5"></textarea>
+            <textarea class="form-control w-25 mx-auto text-center" name="Desc" value="{{old('Desc')}}" value="" id="" cols="" placeholder="إكتب البيان" rows="5"></textarea>
            </section>
             
            <section class="data-input my-2 w-100">
@@ -41,7 +41,7 @@
 
            <section class="data-input my-2 w-100">
             <h2 class="text-center text-warning mb-3">القيمة</h2>
-            <input type="text" class="form-control w-25 mx-auto text-center" name="Amount" placeholder="قيمة المصروف">
+            <input type="text" class="form-control w-25 mx-auto text-center" value="{{old('Amount')}}" name="Amount" placeholder="قيمة المصروف">
            </section>
     
            <section class="data-input my-2 w-100">

@@ -51,7 +51,7 @@ class GroupController extends Controller
 
        
         $request->validate([
-            'GroupName'=>'required|unique:groups,GroupName',
+            'GroupName'=>'required|unique:groups,GroupName|regex:/[ء-ي]/',
             'Day' => 'required',
             'Time' => 'required',
             'BranchName' => 'required|min:0'
@@ -59,6 +59,7 @@ class GroupController extends Controller
         [
             'GroupName.required' => 'من فضلك أدخل أسم المجموعة',
             'GroupName.unique' => 'إسم المجموعة مسجل من قبل',
+            'GroupName.regex' => 'من فضلك أكتب باللغة العربية',
             'Day.required' => 'من فضلك إختار اليوم',
             'Time.required' => 'من فضلك إدخل الوقت',
             'BranchName.required' => 'من فضلك إدخل الفرع',
@@ -147,6 +148,23 @@ class GroupController extends Controller
      */
     public function update(Request $request,$id)
     {
+
+        $request->validate([
+            'GroupName'=>'required|regex:/[ء-ي]/',
+            'Day' => 'required',
+            'Time' => 'required',
+            'BranchName' => 'required|min:0'
+        ],
+        [
+            'GroupName.required' => 'من فضلك أدخل أسم المجموعة',
+            'GroupName.unique' => 'إسم المجموعة مسجل من قبل',
+            'GroupName.regex' => 'من فضلك أكتب باللغة العربية',
+            'Day.required' => 'من فضلك إختار اليوم',
+            'Time.required' => 'من فضلك إدخل الوقت',
+            'BranchName.required' => 'من فضلك إدخل الفرع',
+            'BranchName.min' => 'من فضلك إدخل الفرع',
+
+        ]);
        
         $time = $request->Time;
 

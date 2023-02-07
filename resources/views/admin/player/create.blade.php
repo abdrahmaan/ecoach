@@ -15,27 +15,27 @@
     <div class="data-info  w-50 d-flex flex-column justify-content-center align-items-center">
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">إسم اللاعب</label>
-          <input id="name" class="form-control w-50 text-center mx-auto" name="PlayerName" type="text" placeholder="إسم اللاعب ثلاثى">
+          <input id="name" class="form-control w-50 text-center mx-auto" name="PlayerName" type="text" value="{{old('PlayerName')}}" placeholder="إسم اللاعب ثلاثى">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">السن</label>
-          <input class="form-control w-50 text-center mx-auto" name="Age" type="number" placeholder="السن">
+          <input class="form-control w-50 text-center mx-auto" name="Age" value="{{old('Age')}}" type="number" placeholder="السن">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">رقم التيليفون</label>
-          <input class="form-control w-50 text-center mx-auto" name="Phone" type="number" placeholder="Ex. 0111XXXXXXX">
+          <input class="form-control w-50 text-center mx-auto" name="Phone" value="{{old('Phone')}}" type="text" placeholder="Ex. 0111XXXXXXX">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">رقم ولى الأمر</label>
-          <input class="form-control w-50 text-center mx-auto" name="Phone2" type="number" placeholder="Ex. 0111XXXXXXX">
+          <input class="form-control w-50 text-center mx-auto" name="Phone2" value="{{old('Phone2')}}" type="number" placeholder="Ex. 0111XXXXXXX">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">العنوان</label>
-          <input class="form-control w-50 text-center mx-auto" name="Address" type="text" placeholder="العنوان">
+          <input class="form-control w-50 text-center mx-auto" name="Address" value="{{old('Address')}}" type="text" placeholder="العنوان">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">تاريخ الميلاد</label>
-          <input class="form-control w-50 text-center mx-auto" name="DateOfBirth" type="date">
+          <input class="form-control w-50 text-center mx-auto" name="DateOfBirth" value="{{old('DateOfBirth')}}" type="date">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">تصنيف اللاعب</label>
@@ -67,11 +67,11 @@
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">الطول</label>
-          <input class="form-control w-25 text-center mx-auto" name="Height" type="text" placeholder="الطول">
+          <input class="form-control w-25 text-center mx-auto" name="Height" value="{{old('Height')}}" type="text" placeholder="الطول">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">الوزن</label>
-          <input class="form-control w-25 text-center mx-auto" name="Weight" type="text" placeholder="الوزن">
+          <input class="form-control w-25 text-center mx-auto" name="Weight" value="{{old('Weight')}}" type="text" placeholder="الوزن">
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">المجموعة</label>
@@ -99,7 +99,7 @@
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">فيديو للاعب</label>
-          <input class="form-control w-50 text-center mx-auto" name="VideoLink" type="text" placeholder="لينك فيديو Youtube">
+          <input class="form-control w-50 text-center mx-auto" name="VideoLink" value="{{old('VideoLink')}}" type="text" placeholder="لينك فيديو Youtube">
         </div>
       </div>
   
@@ -115,6 +115,6 @@
 
 </form>
 
-<script src="{{asset('includes/custom/js/newplayer.js')}}"></script>
+{{-- <script src="{{asset('includes/custom/js/newplayer.js')}}"></script> --}}
     
 @endsection
