@@ -49,7 +49,7 @@
        
        @if(session()->has('message')){
         <div id="alert" class="bg-success text-center d-flex align-items-center justify-content-center" style="min-height: 90px; margin-top: -23px; transition: 0.3s ease-out">
-            <h2 class="text-light">تمت العملية بنجاح</h2>
+            <h2 class="text-light">{{session()->get('message')}}</h2>
         </div>
         <script>
             setTimeout(() => {
@@ -60,6 +60,18 @@
         </script>
       }
       @endif
+
+      @if($errors->any())
+       <script>
+         Swal.fire({
+           icon: "error",
+           title: "! تنبيه",
+           text: '{{$errors->all()[0]}}',
+            confirmButtonText: "رجوع",
+            confirmButtonColor: "#e01a22",
+         })
+       </script>
+    @endif
 
        <script src="{{asset('includes/custom/js/classes.js')}}"></script>
        
