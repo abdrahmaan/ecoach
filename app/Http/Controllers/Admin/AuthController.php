@@ -16,6 +16,16 @@ class AuthController extends Controller
 
     public function LoginLogic(Request $request)
     {   
+
+        $request->validate([
+            'username' => 'required|regex:/[a-z0-9]/',
+            'password' => 'required'
+        ],[
+            'username.required'=>'من فضلك أدخل إسم المستخدم',
+            'username.regex'=>'لا تستخدم الرموز والمسافات',
+            'password.required'=>'من فضلك أدخل كلمة السر'
+        ]);
+
         $username = $request->username;
         $password = $request->password;
 
@@ -44,7 +54,7 @@ class AuthController extends Controller
 
         } else {
 
-            $request->session()->flash("error","يرجى التأكد من بيانات الدخول");
+           $request->session()->flash("error","يرجى التأكد من بيانات الدخول");
            return redirect("/login");
         }
     }
@@ -60,9 +70,27 @@ class AuthController extends Controller
 
     public function NewUserLogic(Request $request)
     {
-        $checkUserName = Auth::where("Username",$request->Username)->get()->first();
 
-        if($checkUserName == null){
+
+        
+        $request->validate([
+
+            'FullName' => 'required|regex:/[ء-ي\s]/',
+            'Username' => 'required|regex:/[0-9a-z]/|unique:users,username',
+            'Password' => 'required',
+            'Role' => 'required'
+
+        ],[
+            'FullName.required'=>'من فضلك أدخل إسم الحساب',
+            'FullName.regex'=>'من فضلك أدخل الإسم باللغة العربية',
+            'Username.required'=>'من فضلك أدخل إسم المستخدم',
+            'Username.regex'=>'لا تستحدم المسافات أو الرموز',
+            'Username.unique'=>'إسم المستخدم مستخدم من قبل',
+            'Password.required'=>'من فضلك أدخل كلمة المرور',
+            'Role.required'=>'من فضلك أدخل الصلاحية',
+            
+        ]);
+
 
            $new = Auth::create([
                 'FullName' => $request->FullName,
@@ -71,11 +99,10 @@ class AuthController extends Controller
                 'Role' => $request->Role
             ]);
             $new->save();
-            $request->session()->flash('message', 'done');
-            return redirect("/admin/newuser");
-        } else {
+            $request->session()->flash('message', 'تم إضافة المستخدم بنجاح');
 
-        }
+            return redirect("/admin/newuser");
+
     }
 
     public function DeleteUserLogic($id)

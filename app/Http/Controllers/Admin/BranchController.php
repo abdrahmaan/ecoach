@@ -42,6 +42,14 @@ class BranchController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'BranchName' => 'required|regex:/[ء-ي]/|unique:branches,BranchName'
+        ],[
+            'BranchName.required'=>'من فضلك أدخل إسم الفرع',
+            'BranchName.regex'=>'من فضلك أدخل إسم الفرع باللغة العربية',
+            'BranchName.unique'=>'إسم الفرع مسجل من قبل'
+        ]);
+
        $insert =  Branch::create([
             'BranchName'=> $request->BranchName
         ]);
