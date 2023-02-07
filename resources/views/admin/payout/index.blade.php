@@ -78,7 +78,7 @@
 @section('script')
 <script>
         
-    fetch("http://ecoach.egy/api/admin/payouts/all")
+    fetch("http://ecoach.abdelrahmaan.com/api/admin/payouts/all")
     .then(res => res.json())
     .then(res =>{
         console.log(res);
