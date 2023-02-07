@@ -33,12 +33,12 @@
           </div>
           <div class="data-text w-100 text-center mb-3">
             <label class="text-warning fs-4 mb-2">الفرع</label>
-            <select class="w-50 text-center form-control mx-auto" name="BranchName" name="" id="">
+            <select class="w-50 text-center form-control mx-auto" name="BranchName" id="">
               @isset($Branches)
               @foreach ($Branches as $Branch)
                 <option value="{{$Branch->BranchName}}">{{$Branch->BranchName}}</option>
               @endforeach
-            @endisset  
+            @endisset 
             </select>
           </div>
     

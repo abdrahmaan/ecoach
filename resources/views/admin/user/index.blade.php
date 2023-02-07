@@ -10,17 +10,17 @@
       <div class="group-info w-50 d-flex flex-column justify-content-center align-items-center">
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">الإسم</label>
-          <input id="name" class="form-control w-50 text-center mx-auto" name="FullName" type="text" placeholder="إسم صاحب الحساب">
+          <input id="name" class="form-control w-50 text-center mx-auto" name="FullName" value="{{old('FullName')}}" type="text" placeholder="إسم صاحب الحساب">
         </div>
        
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">Username</label>
-          <input id="name" class="form-control w-50 text-center mx-auto" name="Username" type="text" placeholder="Username">
+          <input id="name" class="form-control w-50 text-center mx-auto" name="Username" value="{{old('Username')}}" type="text" placeholder="Username">
 
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">Password</label>
-          <input class="form-control w-50 text-center mx-auto" type="password" name="Password" placeholder="Password" >
+          <input class="form-control w-50 text-center mx-auto" type="password" name="Password" value="{{old('Password')}}" placeholder="Password" >
         </div>
         <div class="data-text w-100 text-center mb-3">
           <label class="text-warning fs-4 mb-2">التحكم</label>

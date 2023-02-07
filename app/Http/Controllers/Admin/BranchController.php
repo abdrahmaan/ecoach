@@ -42,13 +42,21 @@ class BranchController extends Controller
     public function store(Request $request)
     {
 
+        $request->validate([
+            'BranchName' => 'required|regex:/[ء-ي]/|unique:branches,BranchName'
+        ],[
+            'BranchName.required'=>'من فضلك أدخل إسم الفرع',
+            'BranchName.regex'=>'من فضلك أدخل إسم الفرع باللغة العربية',
+            'BranchName.unique'=>'إسم الفرع مسجل من قبل'
+        ]);
+
        $insert =  Branch::create([
             'BranchName'=> $request->BranchName
         ]);
 
         $insert->save();
 
-        return redirect('/admin/branches/create')->with("message","yes");
+        return redirect('/admin/branches/create')->with("message","تم إضافة الفرع بنجاح");
 
 
     }
@@ -98,7 +106,7 @@ class BranchController extends Controller
        
        $delete = Branch::where("id", $id)->delete();
 
-        session()->flash("message","yes");
+        session()->flash("message","تم حذف الفرع بنجاح");
         return redirect('/admin/branches/create');
     }
 }

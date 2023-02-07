@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500&display=swap" rel="stylesheet">
     @yield('css')
+    <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
 
     <title>@yield('title')</title>
 </head>
@@ -44,12 +45,11 @@
        <span class="highlight"></span>
        
        
-       <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
        
        
        @if(session()->has('message')){
         <div id="alert" class="bg-success text-center d-flex align-items-center justify-content-center" style="min-height: 90px; margin-top: -23px; transition: 0.3s ease-out">
-            <h2 class="text-light">تمت العملية بنجاح</h2>
+            <h2 class="text-light">{{session()->get('message')}}</h2>
         </div>
         <script>
             setTimeout(() => {
@@ -60,6 +60,18 @@
         </script>
       }
       @endif
+
+      @if($errors->any())
+       <script>
+         Swal.fire({
+           icon: "error",
+           title: "! تنبيه",
+           text: '{{$errors->all()[0]}}',
+            confirmButtonText: "رجوع",
+            confirmButtonColor: "#e01a22",
+         })
+       </script>
+    @endif
 
        <script src="{{asset('includes/custom/js/classes.js')}}"></script>
        

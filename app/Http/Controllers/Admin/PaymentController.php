@@ -59,6 +59,14 @@ class PaymentController extends Controller
     {
 
 
+        $request->validate([
+            'Amount'=>'required|numeric'
+        ],[
+            'Amount.required' => 'من فضلك ادخل قيمة الإشتراك',
+            'Amount.numeric' => 'من فضلك أدخل القيمة بالأرقام'
+        ]);
+
+
         $insert = Payment::create([
             'PlayerCode'=> $request->PlayerCode,
             'PlayerName'=> $request->PlayerName,
@@ -67,7 +75,7 @@ class PaymentController extends Controller
             'Branch'=> $request->BranchName,
             'User'=> session()->get('user-data')->FullName ,
         ]);
-        session()->flash("message","done");
+        session()->flash("message","تم دفع الإشتراك لـ $request->PlayerName");
         return redirect('/admin/players');
     }
 
@@ -116,7 +124,7 @@ class PaymentController extends Controller
         
         $deletePayment = Payment::where("id",$id)->delete();
         
-        session()->flash("message","done");
+        session()->flash("message","تم حذف دفع الإشتراك");
 
         return redirect("/admin/payments");
 

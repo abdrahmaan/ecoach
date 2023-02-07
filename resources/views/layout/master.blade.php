@@ -21,9 +21,36 @@
     <script src="{{asset('includes/lib/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('includes/lib/popper.js')}}"></script>
     <script src="{{asset('includes/lib/bootstrap.min.js')}}"></script>
+    <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
     <script src="{{asset('includes/home/custom/js/classes.js')}}"></script>
-    
+
+ 
+
     @yield('script')
+
+    @if($errors->any())
+    <script>
+      Swal.fire({
+        icon: "error",
+        title: "! تنبيه",
+        text: '{{$errors->all()[0]}}',
+         confirmButtonText: "رجوع",
+         confirmButtonColor: "#e01a22",
+      })
+    </script>
+    @endif
+
+    @if(session()->has('error'))
+    <script>
+      Swal.fire({
+        icon: "error",
+        title: "! تنبيه",
+        text: '{{session()->get("error")}}',
+         confirmButtonText: "رجوع",
+         confirmButtonColor: "#e01a22",
+      })
+    </script>
+    @endif
 
 </body>
 </html>

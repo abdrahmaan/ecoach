@@ -88,7 +88,7 @@ class AttendanceController extends Controller{
 
         }
 
-        session()->flash("message","yes");
+        session()->flash("message","تم تسجيل الحضور");
         return redirect('/admin/attendances/create');
     }
 
@@ -117,6 +117,7 @@ class AttendanceController extends Controller{
 
     public function getAllCaptinAttendance()
     {
+        
        
         $attendance = AttendanceCaptin::all();
 
@@ -129,6 +130,8 @@ class AttendanceController extends Controller{
 
    
     }
+
+
     public function captinView()
     {
        
@@ -139,10 +142,12 @@ class AttendanceController extends Controller{
    
     }
     
+
     public function captinDelete($id)
     {
         AttendanceCaptin::where("id",$id)->delete();
-       session()->flash("message","delete done");
+
+         session()->flash("message","تم حذف حضور الكابتن");
 
         return redirect('/admin/attendance/captin');
     }
@@ -168,7 +173,7 @@ class AttendanceController extends Controller{
     public function destroy($id)
     {
        $delete = Attendance::where("id",$id)->delete();
-       session()->flash("message","delete done");
+       session()->flash("message","تم حذف الحضور");
       return redirect("/admin/attendances");
     }
 

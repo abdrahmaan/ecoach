@@ -47,7 +47,25 @@ class GroupController extends Controller
      */
     public function store(Request $request)
     {
+
+
        
+        $request->validate([
+            'GroupName'=>'required|unique:groups,GroupName|regex:/[ء-ي]/',
+            'Day' => 'required',
+            'Time' => 'required',
+            'BranchName' => 'required|min:0'
+        ],
+        [
+            'GroupName.required' => 'من فضلك أدخل أسم المجموعة',
+            'GroupName.unique' => 'إسم المجموعة مسجل من قبل',
+            'GroupName.regex' => 'من فضلك أكتب باللغة العربية',
+            'Day.required' => 'من فضلك إختار اليوم',
+            'Time.required' => 'من فضلك إدخل الوقت',
+            'BranchName.required' => 'من فضلك إدخل الفرع',
+            'BranchName.min' => 'من فضلك إدخل الفرع',
+
+        ]);
 
 
         $time = $request->Time;
@@ -91,7 +109,7 @@ class GroupController extends Controller
 
         $insert->save();
         
-        return redirect("/admin/groups/create")->with("message","yes");
+        return redirect("/admin/groups/create")->with("message","تم إضافة المجموعة بنجاح");
         
     }
 
@@ -130,6 +148,23 @@ class GroupController extends Controller
      */
     public function update(Request $request,$id)
     {
+
+        $request->validate([
+            'GroupName'=>'required|regex:/[ء-ي]/',
+            'Day' => 'required',
+            'Time' => 'required',
+            'BranchName' => 'required|min:0'
+        ],
+        [
+            'GroupName.required' => 'من فضلك أدخل أسم المجموعة',
+            'GroupName.unique' => 'إسم المجموعة مسجل من قبل',
+            'GroupName.regex' => 'من فضلك أكتب باللغة العربية',
+            'Day.required' => 'من فضلك إختار اليوم',
+            'Time.required' => 'من فضلك إدخل الوقت',
+            'BranchName.required' => 'من فضلك إدخل الفرع',
+            'BranchName.min' => 'من فضلك إدخل الفرع',
+
+        ]);
        
         $time = $request->Time;
 
@@ -177,7 +212,7 @@ class GroupController extends Controller
         ]);
 
         
-        return redirect("/admin/groups/create")->with("message","yes");
+        return redirect("/admin/groups/create")->with("message","تم تعديل المجموعة بنجاح");
     }
 
     /**
@@ -190,6 +225,6 @@ class GroupController extends Controller
     {
         $delete = Group::where('id',$id)->delete();
 
-        return redirect("/admin/groups/create")->with("message","yes");
+        return redirect("/admin/groups/create")->with("message","تم حذف المجموعة بنجاح");
     }
 }
