@@ -53,5 +53,7 @@ input:focus{
 input{
     width: 75% !important;
 }
-
+.login-form.w-75.mx-auto.d-flex.flex-column.justify-content-center.align-items-center{
+    width: 100% !important;
+}
 }

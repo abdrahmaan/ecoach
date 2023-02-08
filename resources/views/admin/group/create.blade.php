@@ -9,13 +9,13 @@
       @method("POST")
         @csrf
       <div class="group-data d-flex flex-column align-items-center justify-content-center mt-4" style="min-height: calc(100vh - 180px);">
-        <div class="group-info w-50 d-flex flex-column justify-content-center align-items-center">
-          <div class="data-text w-100 text-center mb-3">
+        <div class="group-info row w-100 d-flex flex-column justify-content-center align-items-center">
+          <div class="data-text col-lg-5 col-12 text-center mb-3">
             <label class="text-warning fs-4 mb-2">إسم المجموعة</label>
             <input id="name" class="form-control w-50 text-center mx-auto" name="GroupName" type="text" placeholder="إسم المجموعة">
           </div>
          
-          <div class="data-text w-100 text-center mb-3">
+          <div class="data-text col-lg-5 col-12 text-center mb-3">
             <label class="text-warning fs-4 mb-2">اليوم</label>
             <select class="w-50 text-center form-control mx-auto"  name="Day" id="">
               <option value="السبت">السبت</option>
@@ -27,11 +27,11 @@
               <option value="الجمعة">الجمعة</option>
             </select>
           </div>
-          <div class="data-text w-100 text-center mb-3">
+          <div class="data-text col-lg-5 col-12 text-center mb-3">
             <label class="text-warning fs-4 mb-2">الساعة</label>
             <input class="form-control w-50 text-center mx-auto" type="time" name="Time" value="12:00">
           </div>
-          <div class="data-text w-100 text-center mb-3">
+          <div class="data-text col-lg-5 col-12 text-center mb-3">
             <label class="text-warning fs-4 mb-2">الفرع</label>
             <select class="w-50 text-center form-control mx-auto" name="BranchName" id="">
               @isset($Branches)
@@ -45,7 +45,7 @@
          
         </div>
     
-        <button  type="submit" class="btn add-group btn-warning text-dark mt-4  w-25 mx-auto d-block">تسجيل المجموعة</button>
+        <button  type="submit" class="btn add-group btn-warning text-dark mt-4  mx-auto d-block">تسجيل المجموعة</button>
        
       </div>
 

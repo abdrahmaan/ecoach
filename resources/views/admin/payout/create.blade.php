@@ -47,14 +47,14 @@
            <section class="data-input my-2 w-100">
             <h2 class="text-center text-warning mb-3">الفرع</h2>
             
-            <select class="form-control w-25 mx-auto text-center" name="Branch" id="">
+            <select class="form-control w-25 mx-auto text-center mb-4" name="Branch" id="">
                 @foreach ($Branches as $Branch)
                         <option value="{{$Branch->BranchName}}">{{$Branch->BranchName}}</option>
                 @endforeach
             </select>
            </section>
-           <button type="submit" class="btn btn-warning w-25 my-3 d-block mx-auto">تسجيل مصروف</button>
-           <a href="/admin/" class="btn btn-danger text-light w-25 d-block mx-auto">إلغاء</a>
+           <button id="btn" type="submit" class="btn btn-warning w-25 my-3 d-block mx-auto">تسجيل مصروف</button>
+           <a id="btn" href="/admin/" class="btn btn-danger text-light d-block w-25 d-block mx-auto">إلغاء</a>
            </section> 
         </form>
         

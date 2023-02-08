@@ -19,14 +19,10 @@
                 </div>
                 <div data-aos="zoom-out" data-aos-duration="1000" class="col-lg-5 col-10 d-flex flex-column align-items-center">
                     <h2 id="title" class="text-center">
-                        ! أكادميتنا مختلفة 
-                        <br>
-                        أكاديميتنا حريفة
+                        {{ __('home.hero-title')}}
                      </h2>
                      <h2 id="desc" class="text-center">
-                        تقييمات اللاعبين ( البدنية - المهارية )
-                        متسجلة  إلكترونياً وموجودة فـ ملف اللاعب الشخصى
-                         
+                      {{ __('home.hero-desc')}}
                      </h2>
                 </div>
             </div>
@@ -40,25 +36,18 @@
             <div class="row p-0 m-0 justify-content-center align-items-center" style="min-height: 400px">
                 <div data-aos="zoom-in" data-aos-duration="1000"  class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/football.png" width="118px" alt="">
-                    <h2 class="fw-bold fs-4">حضور وغياب اللاعبين</h2>
-                    <p class="text-center fs-5">حضور وغياب اللاعبين إلكترونياً
-                        وتحليل إنتظامة وكذلك 
-                        ومتابعة حضور المدربين</p>
+                    <h2 class="fw-bold fs-4">{{__('home.one-title')}}</h2>
+                    <p class="text-center fs-5">{{__('home.one-desc')}}</p>
                 </div>
                 <div data-aos="zoom-out" data-aos-duration="1000" class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/shoot.png" width="118px" alt="">
-                    <h2 class="fw-bold fs-4 text-center">ملف شخصى لكل لاعب</h2>
-                    <p class="text-center fs-5">ملف شخصى لكل لاعب يوضح
-                        بياناته وتقييماته المهارية و البدنية
-                        السابقة ويمكنه من متابعة نفسه</p>
+                    <h2 class="fw-bold fs-4 text-center">{{__('home.two-title')}}</h2>
+                    <p class="text-center fs-5">{{__('home.two-desc')}}</p>
                 </div>
                 <div data-aos="zoom-in" data-aos-duration="1000"  class="col-lg-3 col-10 d-flex flex-column justify-content-center align-items-center">
                     <img class="mb-2" src="/includes/img/icons/ball.png" width="118px" alt="">
-                    <h2 class="fw-bold fs-4 text-center">دقه تقييمات المهارات</h2>
-                    <p class="text-center fs-5">تقييم أداء اللاعب بالتفصيل
-                        (بدنى - مهارى - أداء خطى ) وتوفير 
-                        كافة المعلومات لمتابعة 
-                        مستوى اللاعب</p>
+                    <h2 class="fw-bold fs-4 text-center">{{__('home.three-title')}}</h2>
+                    <p class="text-center fs-5">{{__('home.three-desc')}}</p>
                 </div>
 
             </div>
@@ -68,12 +57,12 @@
     <section class="promotion py-3 bg-secondary" style="min-height: 340px">
         <div data-aos="fade-left" data-aos-duration="1000" class="container w-100 text-center d-flex flex-column align-items-center justify-content-center" style="min-height: 340px">
             <h2 class="title-promotion text-warning fs-1">
-                الكورة فى ملعبنا
-            <br>
-            !وملعبنا فالجون
+                {{__('home.pro-title')}}
             </h2>
-            <p class="data-promotion text-light fs-4">بعد إشتراكك بنهتم بمستواك و نحلله عن طريق تسجيل تقييم خاص بيك بيحتوى 
-                !على تقييم ( بدنى  - مهارى ) نوصل لأهم نقاط فيك تخرج لعيب محصلش </p>
+            <p class="data-promotion text-light fs-4">
+                {{__('home.pro-desc')}}
+
+            </p>
         </div>
     </section>
 

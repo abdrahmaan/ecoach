@@ -4,6 +4,7 @@
 
 @section('css')
 
+<link rel="stylesheet" href="{{asset('includes/custom/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('includes/home/custom/css/login.css')}}">
 <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400&display=swap" rel="stylesheet">
 

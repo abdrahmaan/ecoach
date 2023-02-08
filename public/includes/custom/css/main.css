@@ -47,6 +47,11 @@ body{
     input{
         min-width: 75% !important;
     }
+
+    textarea{
+        min-width: 75% !important;
+    }
+
     input[type="file"]{
         min-width: 75% !important;
     }
@@ -57,6 +62,25 @@ body{
 
     button.add-player{
         min-width: 75% !important
+    }
+    
+    #btn{
+        min-width: 75% !important
+
+    }
+
+  
+
+    /* Attentance Responsive */
+
+    .player-img.w-50{
+        
+        width: 100% !important;
+    }
+    
+    .one-player-data.w-50.d-flex.flex-column.justify-content-center.align-items-center.h-100.py-4{
+        width: 100% !important;
+
     }
 
     

@@ -59,7 +59,7 @@
         <h3 id="counter" class="text-warning text-end pe-5 my-4 d-none">عدد اللاعبين : 6<h3>
         <h3 id="counter-select" class="text-success text-end pe-5 my-4 d-none">عدد المحدد : 6<h3> 
             <input id="playernames" hidden name="PlayerNames"  type="text">
-            <button id="btn-hdor" type="submit" class="btn d-none btn-success d-block mx-auto w-25">حضور الكل</button>
+            <button id="btn-hdor" type="submit" class="btn d-none btn-success d-block mx-auto">حضور الكل</button>
             <div id="players-area" class="row d-none d-flex justify-content-center m-0 p-0" style="min-height: 300px">
 
 
@@ -227,9 +227,9 @@
                             ${player.BranchName}
                             <i class="bi bi-calendar-week"></i>
                         </h5>  
-                        <div class="form-check d-flex p-0 justifiy-content-center align-items-center mt-3">
+                        <div class="form-check d-flex flex-column-reverse flex-lg-row p-0 justifiy-content-center align-items-center mt-3">
                             <h4 class="text-warning mx-2">تحديد اللاعب</h4>
-                            <input class="form-check-input d-block mx-auto my-1" type="checkbox" data-name="${player.PlayerName}" data-code="${player.id}" data-branchname="${player.BranchName}" value="" id="defaultCheck1">
+                            <input class="form-check-input d-block mb-2 mx-auto my-1" type="checkbox" data-name="${player.PlayerName}" data-code="${player.id}" data-branchname="${player.BranchName}" value="" id="defaultCheck1">
                         </div>
 
 
