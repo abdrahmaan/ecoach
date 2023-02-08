@@ -3,26 +3,26 @@
 
 @section('content')
 
-<form action="/admin/newuser" method="post">
+<form action="/admin/newuser"  method="post" class="mb-5">
     @method("POST")
       @csrf
     <div class="group-data d-flex flex-column align-items-center justify-content-center mt-4" style="min-height: calc(100vh - 180px);">
-      <div class="group-info w-50 d-flex flex-column justify-content-center align-items-center">
-        <div class="data-text w-100 text-center mb-3">
+      <div class="group-info row w-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="data-text col-12 col-lg-7 text-center mb-3">
           <label class="text-warning fs-4 mb-2">الإسم</label>
           <input id="name" class="form-control w-50 text-center mx-auto" name="FullName" value="{{old('FullName')}}" type="text" placeholder="إسم صاحب الحساب">
         </div>
        
-        <div class="data-text w-100 text-center mb-3">
+        <div class="data-text col-12 col-lg-7 text-center mb-3">
           <label class="text-warning fs-4 mb-2">Username</label>
           <input id="name" class="form-control w-50 text-center mx-auto" name="Username" value="{{old('Username')}}" type="text" placeholder="Username">
 
         </div>
-        <div class="data-text w-100 text-center mb-3">
+        <div class="data-text col-12 col-lg-7 text-center mb-3">
           <label class="text-warning fs-4 mb-2">Password</label>
           <input class="form-control w-50 text-center mx-auto" type="password" name="Password" value="{{old('Password')}}" placeholder="Password" >
         </div>
-        <div class="data-text w-100 text-center mb-3">
+        <div class="data-text col-12 col-lg-7 text-center mb-3">
           <label class="text-warning fs-4 mb-2">التحكم</label>
           <select class="w-50 text-center form-control mx-auto" name="Role" name="" id="">
             <option value="Admin">Admin</option>
@@ -34,7 +34,7 @@
        
       </div>
   
-      <button  type="submit" class="btn add-group btn-warning text-dark mt-4  w-25 mx-auto d-block">تسجيل الحساب</button>
+      <button id="btn"  type="submit" class="btn add-group  btn-warning text-dark mt-4  w-25 mx-auto d-block">تسجيل الحساب</button>
      
     </div>
 

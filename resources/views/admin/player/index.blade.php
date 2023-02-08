@@ -47,7 +47,7 @@
                     </select>
                 </div>  
                 <div class="row col-10">
-                    <div class="data-filter col-4 mx-auto my-2">
+                    <div class="data-filter col-lg-4 mx-auto my-2">
                         <h3 class="text-warning text-center mb-2">حالة التفعيل</h3>
                         <select class="form-control text-center" name="" id="">
                         <option value="Active">مفعل</option>

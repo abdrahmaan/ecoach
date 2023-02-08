@@ -6,14 +6,7 @@
 
 
 @section('content')
-   
 
-{{-- {{dd($players)}} --}}
-
-
-
-{{-- <form action="{{ route('attendances.store') }}" method="post"> --}}
-    {{-- @method("POST") --}}
         <div class="container">
 
             <div class="row flex-row-reverse justify-content-center m-0 p-0" style="min-height: 200px">
@@ -66,8 +59,9 @@
 
         <h3 id="counter" class="text-warning text-end pe-5 my-4 d-none">عدد اللاعبين : 6</h3>
         <h3 id="counter-select" class="text-success text-end pe-5 my-4 d-none">عدد المحدد : 6</h3> 
-            <input id="playernames" hidden name="PlayerNames"  type="text">
-            <button id="btn-hdor" type="submit" class="btn d-none btn-success d-block mx-auto w-25">حضور الكل</button>
+
+
+
             <div id="players-area" class="row  d-flex justify-content-center m-0 p-0" style="min-height: 300px">
 
                 <table class="table table-dark table-bordered table-striped  w-75 mx-auto text-center">
@@ -86,7 +80,6 @@
     
         </div>
 
-    {{-- </form> --}}
 
     <style>
         div.player-col{
