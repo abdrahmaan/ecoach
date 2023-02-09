@@ -82,8 +82,8 @@ Route::middleware('user')->group(function () {
     Route::get("/login", [AuthController::class, "LoginPage"]);
     Route::post("/login", [AuthController::class, "LoginLogic"]);
     Route::view("/players","player.index")->middleware('no-cache');
+    Route::redirect("/","/home");
     Route::view("/home","home.index");
-
 
 
 });
