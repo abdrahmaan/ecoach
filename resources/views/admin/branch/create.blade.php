@@ -30,7 +30,7 @@
     
 <section class="table-area  mt-5 mx-auto w-75 d-flex justify-content-center align-items-center">
 
-  <table class="table table-bordered  table-dark w-100 text-center">
+  <table class="table   table-dark w-100 text-center">
     <thead>
       <td>التعديلات</td>
       <td>إسم الفرع</td>
