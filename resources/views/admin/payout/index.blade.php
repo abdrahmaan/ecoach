@@ -52,7 +52,7 @@
 </div>
     <div id="players-area" class="row  d-flex justify-content-center m-0 p-0" style="min-height: 300px">
 
-        <table class="table table-dark table-bordered table-striped  w-75 mx-auto text-center">
+        <table class="table table-dark table-striped  w-75 mx-auto text-center">
             <thead>
                <tr>
                 <th>التعديلات</th>
@@ -219,8 +219,8 @@
                  confirmButtonColor: "#e01a22",
             })
                 Area.innerHTML = "";
-                // Area.className.includes("d-none") ? null : Area.classList.add("d-none");
-                counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
+                Area.className.includes("d-none") ? null : Area.classList.add("d-none");
+                // counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
                 console.log("no Data Found");
                 
                 

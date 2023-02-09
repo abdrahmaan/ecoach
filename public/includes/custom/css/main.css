@@ -31,6 +31,10 @@ body{
 
 }
 
+td {
+    white-space: nowrap;
+}
+
 }
 
 
@@ -83,9 +87,46 @@ body{
 
     }
 
+
     
 }
 
+
+@media (max-width: 500px){
+    
+    /* Tables Responsive */
+
+    .table thead {
+        display: none;
+    }
+
+    .table , .table tbody, .table tbody tr, .table tbody td{
+        display: block;
+        width: 100%;
+        
+    }
+
+    .table tbody tr {
+        margin-bottom: 20px;
+    }
+
+    .table tbody td {
+        text-align: center   !important;
+        position: relative;
+    }
+    /* .table tbody td::after {
+        content: attr(data-title);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 13px;    
+        padding-right: 10px;
+        color: yellow;
+    } */
+
+
+}
 
 
 .form-control:focus{

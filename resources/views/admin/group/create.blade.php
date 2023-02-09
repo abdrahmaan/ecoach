@@ -62,12 +62,13 @@
       <td>الوقت</td>
       <td>اليوم</td>
       <td>إسم المجموعة</td>
+      <td>#</td>
     </thead>
     <tbody>
       @isset($Groups)
         @foreach ($Groups as $Group)
         <tr>
-          <td>
+          <td  data-title="التعديلات">
             <form action="/admin/groups/{{$Group->id}}" method="POST" class="d-inline">
               @csrf
               {{ csrf_field() }}
@@ -76,9 +77,10 @@
             </form>
             <button class="btn btn-success"><a class="text-light" style='text-decoration: none' href="/admin/groups/{{$Group->id}}/edit">تعديل</a></button>
           </td>
-          <td class="text-center align-middle">{{$Group->Time}}</td>
-          <td class="text-center align-middle">{{$Group->Day}}</td>
-          <td class="text-center align-middle">{{$Group->GroupName}}</td>
+          <td data-title="الوقت" class="text-center align-middle">{{$Group->Time}}</td>
+          <td data-title="اليوم" class="text-center align-middle">{{$Group->Day}}</td>
+          <td data-title="إسم المجموعة" class="text-center align-middle">{{$Group->GroupName}}</td>
+          <td data-title="#" class="text-center align-middle">{{$Group->id}}</td>
         </tr>
         @endforeach
       @endisset  
