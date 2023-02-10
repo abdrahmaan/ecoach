@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
-
-use App\Models\Attendance;
-use App\Models\AttendanceCaptin;
-use App\Models\Player;
 use App\Models\Group;
+
 use App\Models\Branch;
+use App\Models\Player;
+use App\Models\Attendance;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use App\Models\AttendanceCaptin;
+use App\Http\Controllers\Controller;
 
 class AttendanceController extends Controller{
 
@@ -49,6 +50,9 @@ class AttendanceController extends Controller{
         $players = Player::all();
         $Groups = Group::all();
         $Branches = Branch::all();
+       
+
+
 
         return view('admin.attendance.create',["players"=>$players,"Groups" => $Groups,"Branches" => $Branches]);
     }
@@ -67,11 +71,16 @@ class AttendanceController extends Controller{
 
         if(session()->get('user-data')->Role == "Captin"){
 
-            AttendanceCaptin::create([
-                'CaptinName' => session()->get('user-data')->FullName,
-                'GroupName' => $GroupName,
-                'BranchName' => $Names[0]->branchname
-            ]);
+          $CaptinAttendance_Today = AttendanceCaptin::whereDate('created_at', Carbon::today())->where('GroupName',$GroupName)->get()->toArray();
+
+            if(empty($CaptinAttendance_Today)){
+                AttendanceCaptin::create([
+                    'CaptinName' => session()->get('user-data')->FullName,
+                    'GroupName' => $GroupName,
+                    'BranchName' => $Names[0]->branchname
+                ]);
+            }       
+          
 
         }
 
