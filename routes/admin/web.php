@@ -47,8 +47,8 @@ Route::prefix("admin")->middleware('auth')->group(function (){
     // Admin Only Routes Access
     Route::middleware('just-admin')->group(function(){
 
-        Route::view('/', 'admin.index')->name('dashboard.index');
-        Route::view('dashboard', 'admin.index')->name('dashboard.index');
+        Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard.index');
+        Route::get('dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard.index');
 
         // Players
         Route::resource('players', 'App\Http\Controllers\Admin\PlayerController');

@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+
 use App\Models\Player;
 use App\Models\Group;
+use App\Models\SiteData;
 use App\Models\Branch;
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
 
 
@@ -283,16 +286,19 @@ class PlayerController extends Controller
 
       if($type == "Active"){
 
+        $updateToggle = SiteData::where('Name',"CountUnActive")->increment('Value', 1);
+
         $update = Player::where("id",$id)->update([
                "Status" => "UnActive" 
         ]);
-
+        session()->flash("message","تم تعطيل اللاعب بنجاح");
       }  else {
+
         $update = Player::where("id",$id)->update([
             "Status" => "Active" 
          ]);
+         session()->flash("message","تم تفعيل اللاعب بنجاح");
       }
-      session()->flash("message","done");
       return redirect('/admin/players');
 
     }
