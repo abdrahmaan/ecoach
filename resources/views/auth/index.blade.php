@@ -1,6 +1,7 @@
 
 @extends('layout.master')
 
+@section('title', env("APP_NAME") . " | تسجيل الدخول")
 
 @section('css')
 
