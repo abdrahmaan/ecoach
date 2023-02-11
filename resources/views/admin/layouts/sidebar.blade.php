@@ -115,18 +115,13 @@
                   تسجيل الخروج
                   <i class="bi bi-box-arrow-in-left mx-1"></i>
                 </a>
-
-            
-          <hr class="dropdown-divider d-none bg-warning w-50 my-3" style="min-height: 1px;">
-
-            
           </div>
           </div>
           <!-- Sidebar End -->
 
     @endif
 
-
+    
 
     @if (session()->get('user-data')->Role !== "Admin") 
         <!-- Sidebar Start -->
