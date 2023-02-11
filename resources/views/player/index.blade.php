@@ -1,6 +1,8 @@
 
 @extends('layout.master')    
 
+@section('title', env("APP_NAME") . " | اللاعبين")
+
 
 @section('css')
         <!-- Google Fonts -->

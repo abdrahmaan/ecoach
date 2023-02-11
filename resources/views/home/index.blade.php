@@ -1,7 +1,8 @@
 
 @extends('layout.master')    
 
-
+@section('title', env("APP_NAME") . " | الرئيسية")
+    
 @section('css')
         <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
