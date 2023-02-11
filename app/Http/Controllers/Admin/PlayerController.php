@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 
 use App\Models\Player;
+use App\Models\Skill;
 use App\Models\Group;
 use App\Models\SiteData;
 use App\Models\Branch;
@@ -153,7 +154,16 @@ class PlayerController extends Controller
     public function show($id)
     {
 
-        return view("admin.player.show")->with('id',$id);
+
+        $PlayerData = Player::where("id",$id)->get()->first();
+        $PlayerSkill = Skill::where("PlayerCode",$id)->get()->all();
+
+        $passData = [
+            'Player' =>$PlayerData,
+            "Skills"=> $PlayerSkill
+        ];
+
+        return view("admin.player.show")->with('data',$passData);
 
     }
 
