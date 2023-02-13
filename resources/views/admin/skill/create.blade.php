@@ -409,56 +409,56 @@
               ];
 
               let AdaKhaty = [
-                {"التمريرة_المناسبة" : rangess[14].value},
-                {"اللعب_المباشر" : rangess[15].value},
-                {"الجرى_وأخذ_مكان_بعد_الكرة" : rangess[16].value},
-                {"الجرى_للكرة_القادمة" : rangess[17].value},
-                {"الكفاح_على_الكرة" : rangess[18].value},
-                {"تغطية_الزميل" : rangess[19].value},
+                {"Tamrera_Monasba" : rangess[14].value},
+                {"Le3b_Mobasher" : rangess[15].value},
+                {"Gary_A5z_B3d_Kora" : rangess[16].value},
+                {"gary_Kora_Kadma" : rangess[17].value},
+                {"Kefa7_Kora" : rangess[18].value},
+                {"Ta8tya_Zemel" : rangess[19].value},
               ];
 
               let Mahary = [
-                {"تنطيط_الكرة_بالرجلين" : rangess[20].value},
-                {"تنطيط_الكرة_بالرأس" : rangess[21].value},
-                {"تنطيط_الكرة_بالجسم_كله" : rangess[22].value},
-                {"الركلات" : rangess[23].value},
-                {"الركل_لأبعد_مسافة" : rangess[24].value},
-                {"المراوغة" : rangess[25].value},
-                {"دقة_التمرير" : rangess[26].value},
-                {"دقة_التصويب" : rangess[27].value},
-                {"رمية_التماس" : rangess[28].value},
-                {"الجرى_بالكرة" : rangess[29].value},
-                {"ضرب_الكرة_بالرأس" : rangess[30].value},
-                {"السيطرة_على_الكرة" : rangess[31].value},
+                {"Tanteet_Regleen" : rangess[20].value},
+                {"Tanteen_Ras" : rangess[21].value},
+                {"Tanteet_Gesm" : rangess[22].value},
+                {"Raklat" : rangess[23].value},
+                {"Rakl_Ab3ad_Msafa" : rangess[24].value},
+                {"Mraw8a" : rangess[25].value},
+                {"Deka_Tamrer" : rangess[26].value},
+                {"Deka_Taswep" : rangess[27].value},
+                {"Ramyet_Tmas" : rangess[28].value},
+                {"Gary_Kora" : rangess[29].value},
+                {"Darb_Kora_Ras" : rangess[30].value},
+                {"Saytra_Kora" : rangess[31].value},
               ];
 
               let MentalState = [
-                {"الثقة_بالنفس" : rangess[32].value},
-                {"الشجاعة" : rangess[33].value},
-                {"الكفاح" : rangess[34].value},
-                {"عدم_التردد" : rangess[35].value},
-                {"المثابرة" : rangess[36].value},
-                {"التصميم" : rangess[37].value},
-                {"المبادأة" : rangess[38].value},
+                {"Seqa_Nafs" : rangess[32].value},
+                {"Shaga3a" : rangess[33].value},
+                {"Kefa7" : rangess[34].value},
+                {"Adam_Taradod" : rangess[35].value},
+                {"Mosabra" : rangess[36].value},
+                {"Tasmem" : rangess[37].value},
+                {"Mobad2a" : rangess[38].value},
               ];
 
               let BrainState = [
-                {"تركيز_الإنتباة" : rangess[39].value},
-                {"الملاحظة" : rangess[40].value},
-                {"التفكير" : rangess[41].value},
-                {"القدرة_على_الإستنتاج" : rangess[42].value},
-                {"سرعة_التصرف" : rangess[43].value},
+                {"Tarkez_Entbah" : rangess[39].value},
+                {"Mola7za" : rangess[40].value},
+                {"Tafker" : rangess[41].value},
+                {"Koda_3la_Estntag" : rangess[42].value},
+                {"Sor3_Tasarof" : rangess[43].value},
               ];
 
 
                 
 
               let obj = {
-                "التقييمات_البدنية" : PhySkill,
-                "الأداء_الخطى" : AdaKhaty,
-                "التقييمات_المهارية" : Mahary,
-                "الحالة_النفسية" : MentalState,
-                "القدرات_العقلية" : BrainState,
+                "Takyeem_Badany" : PhySkill,
+                "Adaa_Khaty" : AdaKhaty,
+                "Takyeem_Mahary" : Mahary,
+                "Hala_Nafsy" : MentalState,
+                "Kodra_3aqly" : BrainState,
                 };
 
               
