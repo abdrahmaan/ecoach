@@ -2,6 +2,7 @@
 
 
 @section('title',"ملف اللاعب")
+@section('icon',"bi bi-person-fill")
     {{-- {{dd()}} --}}
 
 @section('content')
@@ -78,7 +79,11 @@
             <h3 class="text-dark text-end mb-5" dir="rtl">التقييمات المهارية :</h3>
     
             
-    
+    {{-- {{dd($data["Skills"][0]->Skills)}} --}}
+    {{-- {{dd(json_decode($data["Skills"][0]->Skills)->Kodra_3aqly[1])}} --}}
+    {{-- {{dd(json_decode($data["Skills"])->Skills)->Adaa_Khaty[0]->Tamrera_Monasba}} --}}
+
+
             @foreach ($data["Skills"] as $skill)
             
             <div class="accordion my-2" id="accordion{{$skill->id}}">
@@ -100,6 +105,7 @@
                                 {{-- {{dd(json_decode($skill->Skills)->التقييمات_البدنية[0]->رشاقة)}} --}}
                                 {{-- {{dd(json_decode($skill->Skills)->التقييمات_البدنية[0]->مرونة)}} --}}
                                  {{-- الأداء الخطي و التقييمات المهارية --}}
+
                                  <div id="5aty&mahary" class="accordion col-lg-5 col-12  my-2" id="accordionExample">
                                     <div class="accordion-item">
                                     <h2 class="accordion-header d-flex justify-content-center align-items-center" id="headingOne">
@@ -118,33 +124,33 @@
                                             <div class="card-body row justify-content-center">
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">التمريرة المناسبة</label>
-                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[0]->التمريرة_المناسبة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[0]->التمريرة_المناسبة}}%</label>
+                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[0]->Tamrera_Monasba}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[0]->Tamrera_Monasba}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">اللعب المباشر</label>
-                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[1]->اللعب_المباشر}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[1]->اللعب_المباشر}}%</label>
+                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[1]->Le3b_Mobasher}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[1]->Le3b_Mobasher}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-5 mb-2">الجرى وأخذ مكان بعد الكرة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[2]->الجرى_وأخذ_مكان_بعد_الكرة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[2]->الجرى_وأخذ_مكان_بعد_الكرة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[2]->Gary_A5z_B3d_Kora}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[2]->Gary_A5z_B3d_Kora}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الجرى للكرة القادمة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[3]->الجرى_للكرة_القادمة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[3]->الجرى_للكرة_القادمة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[3]->gary_Kora_Kadma}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[3]->gary_Kora_Kadma}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الكفاح على الكرة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[4]->الكفاح_على_الكرة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[4]->الكفاح_على_الكرة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[4]->Kefa7_Kora}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[4]->Kefa7_Kora}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">تغطية الزميل</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الأداء_الخطى[5]->تغطية_الزميل}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الأداء_الخطى[5]->تغطية_الزميل}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Adaa_Khaty[5]->Ta8tya_Zemel}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Adaa_Khaty[5]->Ta8tya_Zemel}}%</label>
                                                 </div>
                                             
                                             </div>
@@ -154,63 +160,63 @@
                                             <div class="card-body row justify-content-center">
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">تنطيط الكرة بالرجلين</label>
-                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[0]->تنطيط_الكرة_بالرجلين}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[0]->تنطيط_الكرة_بالرجلين}}%</label>
+                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[0]->Tanteet_Regleen}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[0]->Tanteet_Regleen}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">تنطيط الكرة بالرأس</label>
-                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[1]->تنطيط_الكرة_بالرأس}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[1]->تنطيط_الكرة_بالرأس}}%</label>
+                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[1]->Tanteen_Ras}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[1]->Tanteen_Ras}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-5 mb-2">تنطيط الكرة بالجسم كله</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[2]->تنطيط_الكرة_بالجسم_كله}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[2]->تنطيط_الكرة_بالجسم_كله}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[2]->Tanteet_Gesm}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[2]->Tanteet_Gesm}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الركلات</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[3]->الركلات}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[3]->الركلات}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[3]->Raklat}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[3]->Raklat}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الركل لأبعد مسافة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[4]->الركل_لأبعد_مسافة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[4]->الركل_لأبعد_مسافة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[4]->Rakl_Ab3ad_Msafa}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[4]->Rakl_Ab3ad_Msafa}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">المراوغة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[5]->المراوغة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[5]->المراوغة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[5]->Mraw8a}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[5]->Mraw8a}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">دقة التمرير</label>
-                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[6]->دقة_التمرير}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[6]->دقة_التمرير}}%</label>
+                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[6]->Deka_Tamrer}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[6]->Deka_Tamrer}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">دقة التصويب</label>
-                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[7]->دقة_التصويب}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[7]->دقة_التصويب}}%</label>
+                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[7]->Deka_Taswep}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[7]->Deka_Taswep}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-5 mb-2">رميةالتماس</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[8]->رمية_التماس}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[8]->رمية_التماس}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[8]->Ramyet_Tmas}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[8]->Ramyet_Tmas}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الجرى بالكرة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[9]->الجرى_بالكرة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[9]->الجرى_بالكرة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[9]->Gary_Kora}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[9]->Gary_Kora}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">ضرب الكرة بالرأس</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[10]->ضرب_الكرة_بالرأس}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[10]->ضرب_الكرة_بالرأس}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[10]->Darb_Kora_Ras}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[10]->Darb_Kora_Ras}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">السيطرة على الكرة</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->التقييمات_المهارية[11]->السيطرة_على_الكرة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_المهارية[11]->السيطرة_على_الكرة}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Takyeem_Mahary[11]->Saytra_Kora}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Mahary[11]->Saytra_Kora}}%</label>
                                                 </div>
                                                 
                                             </div>
@@ -240,81 +246,81 @@
                                                <h1 class="text-dark text-end pe-4 fs-3 mb-5">التحمل</h2>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">عام</label>
-                                                    <input id='myrange'  data-name="عام" disabled class="text-center w-100" min="0" max="100" step="2.5" value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->عام}}" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->عام}}%</label>
+                                                    <input id='myrange'  data-name="عام" disabled class="text-center w-100" min="0" max="100" step="2.5" value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->عام}}" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->عام}}%</label>
                                                     
                                                     
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">أداء</label>
-                                                    <input id='myrange' disabled  data-name="أداء" class="text-center w-100" min="0" max="100" step="2.5" name="" value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->أداء}}" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->أداء}}%</label>
+                                                    <input id='myrange' disabled  data-name="أداء" class="text-center w-100" min="0" max="100" step="2.5" name="" value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->أداء}}" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->أداء}}%</label>
                                                     
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">سرعة</label>
-                                                    <input id='myrange'  data-name="سرعة" class="text-center w-100" min="0"  disabled max="100" step="2.5" name="" value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->سرعة}}" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->سرعة}}%</label>
+                                                    <input id='myrange'  data-name="سرعة" class="text-center w-100" min="0"  disabled max="100" step="2.5" name="" value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->سرعة}}" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->سرعة}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">قوة</label>
-                                                    <input id='myrange'  data-name="قوة" class="text-center w-100" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->قوة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->التحمل->قوة}}%</label>
+                                                    <input id='myrange'  data-name="قوة" class="text-center w-100" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->قوة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->التحمل->قوة}}%</label>
                                                 </div>
     
                                                 <h1 class="text-dark text-end pe-4 fs-3 mb-5">القوة</h2>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">تحمل</label>
-                                                        <input id='myrange' data-name="تحمل" class=" text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->تحمل}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->تحمل}}%</label>
+                                                        <input id='myrange' data-name="تحمل" class=" text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->تحمل}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->تحمل}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">قدرة</label>
-                                                        <input id='myrange'  data-name="قدرة" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->قدرة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->قدرة}}%</label>
+                                                        <input id='myrange'  data-name="قدرة" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->قدرة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->قدرة}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">قصوى</label>
-                                                        <input id='myrange' data-name="قصوى" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->قصوى}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->القوة->قصوى}}%</label>
+                                                        <input id='myrange' data-name="قصوى" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->قصوى}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->القوة->قصوى}}%</label>
                                                     </div>
                                                 <h1 class="text-dark text-end pe-4 fs-3 mb-5">السرعة</h2>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">إنتقالية</label>
-                                                        <input id='myrange' data-name="إنتقالية" class="text-center w-100 m-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->انتقالية}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->انتقالية}}%</label>
+                                                        <input id='myrange' data-name="إنتقالية" class="text-center w-100 m-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->انتقالية}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->انتقالية}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">حركية</label>
-                                                        <input id='myrange' data-name="حركية" class="text-center w-100" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->حركية}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->حركية}}%</label>
+                                                        <input id='myrange' data-name="حركية" class="text-center w-100" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->حركية}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->حركية}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">رد فعل</label>
-                                                        <input id='myrange'  data-name="رد فعل" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->رد_فعل}}"  min="0" max="100" step="2.5" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->السرعة->رد_فعل}}%</label>
+                                                        <input id='myrange'  data-name="رد فعل" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->رد_فعل}}"  min="0" max="100" step="2.5" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->السرعة->رد_فعل}}%</label>
                                                     </div>
                                                 <h1 class="text-dark text-end pe-4 fs-3 mb-5">رشاقة</h2>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">خاص</label>
-                                                        <input id='myrange' data-name="خاص" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->الرشاقة->خاص}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->الرشاقة->خاص}}%</label>
+                                                        <input id='myrange' data-name="خاص" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->الرشاقة->خاص}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->الرشاقة->خاص}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">عام</label>
-                                                        <input id='myrange'  data-name="عام" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->الرشاقة->عام}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->الرشاقة->عام}}%</label>
+                                                        <input id='myrange'  data-name="عام" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->الرشاقة->خاص}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->الرشاقة->عام}}%</label>
                                                     </div>
                                                 <h1 class="text-dark text-end pe-4 fs-3 mb-5">مرونة</h2>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">خاص</label>
-                                                        <input id='myrange'data-name="خاص" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->المرونة->خاص}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->المرونة->خاص}}%</label>
+                                                        <input id='myrange'data-name="خاص" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->المرونة->خاص}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->المرونة->خاص}}%</label>
                                                     </div>
                                                     <div class="data-text col-lg-5 col-12 d-flex flex-column align-items-center text-center mb-3">
                                                         <label class="text-dark fs-4 mb-2">عام</label>
-                                                        <input id='myrange'  data-name="عام" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->التقييمات_البدنية[0]->المرونة->عام}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->التقييمات_البدنية[0]->المرونة->عام}}%</label>
+                                                        <input id='myrange'  data-name="عام" class="text-center w-100 mx-auto" disabled value="{{json_decode($skill->Skills)->Takyeem_Badany[0]->المرونة->عام}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                      <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Takyeem_Badany[0]->المرونة->عام}}%</label>
                                                     </div>
                                             </div>
                                         </div>
@@ -342,28 +348,28 @@
                                             <div class="card-body row justify-content-center">
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">تركيز الإنتباه</label>
-                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->القدرات_العقلية[0]->تركيز_الإنتباة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->القدرات_العقلية[0]->تركيز_الإنتباة}}%</label>
+                                                    <input id='myrange' data-name="عام" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Kodra_3aqly[0]->Tarkez_Entbah}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Kodra_3aqly[0]->Tarkez_Entbah}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الملاحظة</label>
-                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->القدرات_العقلية[1]->الملاحظة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->القدرات_العقلية[1]->الملاحظة}}%</label>
+                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Kodra_3aqly[1]->Mola7za}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Kodra_3aqly[1]->Mola7za}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">التفكير</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->القدرات_العقلية[2]->التفكير}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->القدرات_العقلية[2]->التفكير}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Kodra_3aqly[2]->Tafker}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Kodra_3aqly[2]->Tafker}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">القدرة على الإستنتاج</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->القدرات_العقلية[3]->القدرة_على_الإستنتاج}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->القدرات_العقلية[3]->القدرة_على_الإستنتاج}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Kodra_3aqly[3]->Koda_3la_Estntag}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Kodra_3aqly[3]->Koda_3la_Estntag}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">سرعة التصرف</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->القدرات_العقلية[4]->سرعة_التصرف}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->القدرات_العقلية[4]->سرعة_التصرف}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Kodra_3aqly[4]->Sor3_Tasarof}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Kodra_3aqly[4]->Sor3_Tasarof}}%</label>
                                                 </div>
                                 
                                             </div>
@@ -391,38 +397,38 @@
                                             <div class="card-body row justify-content-center">
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الثقة بالنفس</label>
-                                                    <input id='myrange' data-name="عام" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[0]->الثقة_بالنفس}}" class="text-center w-100 mx-aut100" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[0]->الثقة_بالنفس}}%</label>
+                                                    <input id='myrange' data-name="عام" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[0]->Seqa_Nafs}}" class="text-center w-100 mx-aut100" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[0]->Seqa_Nafs}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الشجاعة</label>
-                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[1]->الشجاعة}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[1]->الشجاعة}}%</label>
+                                                    <input id='myrange' data-name="أداء" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[1]->Shaga3a}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[1]->Shaga3a}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">الكفاح</label>
-                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[2]->الكفاح}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[2]->الكفاح}}%</label>
+                                                    <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[2]->Kefa7}}"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[2]->Kefa7}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">عدم التردد</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[3]->عدم_التردد}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[3]->عدم_التردد}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[3]->Adam_Taradod}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[3]->Adam_Taradod}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">المثابرة</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[4]->المثابرة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[4]->المثابرة}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[4]->Mosabra}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[4]->Mosabra}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">التصميم</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[5]->التصميم}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[5]->التصميم}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[5]->Tasmem}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[5]->Tasmem}}%</label>
                                                 </div>
                                                 <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
                                                     <label class="text-dark fs-4 mb-2">المبادأة</label>
-                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->الحالة_النفسية[6]->المبادأة}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
-                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->الحالة_النفسية[6]->المبادأة}}%</label>
+                                                    <input id='myrange' data-name="قوة" class="text-center w-100 mx-aut100" disabled value="{{json_decode($skill->Skills)->Hala_Nafsy[6]->Mobad2a}}" min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
+                                                    <label class="text-danger fs-4 mb-2">{{json_decode($skill->Skills)->Hala_Nafsy[6]->Mobad2a}}%</label>
                                                 </div>
                                     
                                             </div>
