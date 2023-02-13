@@ -23,6 +23,11 @@ body{
     
 }
 
+
+.accordion-button:not(.collapsed){
+    background-color: black !important;
+}
+
 @media (min-width:760px) {
     body{
    

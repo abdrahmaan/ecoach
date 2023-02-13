@@ -215,7 +215,7 @@
                         <label class="text-success fs-4 mb-2">50%</label>
                       </div>
                       <div class="data-text col-lg-5 col-12 d-flex flex-column text-center mb-3">
-                          <label class="text-danger fs-5 mb-2">رميةالتماس</label>
+                          <label class="text-danger fs-4 mb-2">رميةالتماس</label>
                           <input id='myrange' data-name="سرعة" class="text-center w-100 mx-au100o"  min="0" max="100" step="2.5" name="" type="range" placeholder="لينك فيديو Youtube">
                         <label class="text-success fs-4 mb-2">50%</label>
                       </div>
@@ -357,14 +357,18 @@
     </form>
     
   <script>
+
       let x = document.querySelectorAll('#myrange');
 
       let success = {};
     
       
       x.forEach(element => {
+
       element.addEventListener("change",(e)=>{
-          let inputt = document.querySelector("#myinput")
+
+          let inputt = document.querySelector("#myinput");
+
            let rangess = document.querySelectorAll('#myrange');
 
               e.target.nextElementSibling.innerText = e.target.value + "%"; 
@@ -388,7 +392,7 @@
                     {
                       'انتقالية' : rangess[7].value,
                       'حركية' : rangess[8].value,
-                      'رد فعل' : rangess[9].value,
+                      'رد_فعل' : rangess[9].value,
                     },
                   الرشاقة : 
                     {
@@ -405,60 +409,61 @@
               ];
 
               let AdaKhaty = [
-                {"التمريرة المناسبة" : rangess[14].value},
-                {"اللعب المباشر" : rangess[15].value},
-                {"الجرى وأخذ مكان بعد الكرة" : rangess[16].value},
-                {"الجرى للكرة القادمة" : rangess[17].value},
-                {"الكفاح على الكرة" : rangess[18].value},
-                {"تغطية الزميل" : rangess[19].value},
+                {"التمريرة_المناسبة" : rangess[14].value},
+                {"اللعب_المباشر" : rangess[15].value},
+                {"الجرى_وأخذ_مكان_بعد_الكرة" : rangess[16].value},
+                {"الجرى_للكرة_القادمة" : rangess[17].value},
+                {"الكفاح_على_الكرة" : rangess[18].value},
+                {"تغطية_الزميل" : rangess[19].value},
               ];
 
               let Mahary = [
-                {"تنطيط الكرة بالرجلين" : rangess[20].value},
-                {"تنطيط الكرة بالرأس" : rangess[21].value},
-                {"تنطيط الكرة بالجسم كله" : rangess[22].value},
+                {"تنطيط_الكرة_بالرجلين" : rangess[20].value},
+                {"تنطيط_الكرة_بالرأس" : rangess[21].value},
+                {"تنطيط_الكرة_بالجسم_كله" : rangess[22].value},
                 {"الركلات" : rangess[23].value},
-                {"الركل لأبعد مسافة" : rangess[24].value},
+                {"الركل_لأبعد_مسافة" : rangess[24].value},
                 {"المراوغة" : rangess[25].value},
-                {"دقة التمرير" : rangess[26].value},
-                {"دقة التصويب" : rangess[27].value},
-                {"رمية التماس" : rangess[28].value},
-                {"الجرى بالكرة" : rangess[29].value},
-                {"ضرب الكرة بالرأس" : rangess[30].value},
-                {"السيطرة على الكرة" : rangess[31].value},
+                {"دقة_التمرير" : rangess[26].value},
+                {"دقة_التصويب" : rangess[27].value},
+                {"رمية_التماس" : rangess[28].value},
+                {"الجرى_بالكرة" : rangess[29].value},
+                {"ضرب_الكرة_بالرأس" : rangess[30].value},
+                {"السيطرة_على_الكرة" : rangess[31].value},
               ];
 
               let MentalState = [
-                {"الثقة بالنفس" : rangess[32].value},
+                {"الثقة_بالنفس" : rangess[32].value},
                 {"الشجاعة" : rangess[33].value},
                 {"الكفاح" : rangess[34].value},
-                {"عدم التردد" : rangess[35].value},
+                {"عدم_التردد" : rangess[35].value},
                 {"المثابرة" : rangess[36].value},
                 {"التصميم" : rangess[37].value},
                 {"المبادأة" : rangess[38].value},
               ];
 
               let BrainState = [
-                {"تركيز الإنتباة" : rangess[39].value},
+                {"تركيز_الإنتباة" : rangess[39].value},
                 {"الملاحظة" : rangess[40].value},
                 {"التفكير" : rangess[41].value},
-                {"القدرة على الإستنتاج" : rangess[42].value},
-                {"سرعة التصرف" : rangess[43].value},
+                {"القدرة_على_الإستنتاج" : rangess[42].value},
+                {"سرعة_التصرف" : rangess[43].value},
               ];
 
 
                 
 
               let obj = {
-                "التقييمات البدنية" : PhySkill,
-                "الأداء الخطى" : AdaKhaty,
-                "التقييمات المهارية" : Mahary,
-                "الحالة النفسية" : MentalState,
-                "القدرات العقلية" : BrainState,
+                "التقييمات_البدنية" : PhySkill,
+                "الأداء_الخطى" : AdaKhaty,
+                "التقييمات_المهارية" : Mahary,
+                "الحالة_النفسية" : MentalState,
+                "القدرات_العقلية" : BrainState,
                 };
 
               
-                Maharat = obj;
+             
+              let Maharat = obj;
 
               inputt.value = "";
 
