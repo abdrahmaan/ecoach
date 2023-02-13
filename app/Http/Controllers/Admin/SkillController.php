@@ -107,8 +107,11 @@ class SkillController extends Controller
      * @param  \App\Models\Skill  $skill
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Skill $skill)
+    public function destroy($id)
     {
-        //
+        $delete = Skill::where("id",$id)->delete();
+
+        session()->flash("message","تم حذف التقييم بنجاح");
+        return redirect("/admin/players");
     }
 }
