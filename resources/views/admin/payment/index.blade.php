@@ -258,6 +258,8 @@
                 </tr>
                     `;
 
+            window.scrollBy(0,550);
+                    
 
                 Area.innerHTML += TotalHTML;
                 Area.className.includes("d-none") ? Area.classList.remove("d-none") : null;

@@ -23,7 +23,7 @@
            {{-- {{dd($data)}} --}}
 
 
-           <section class="row m-0 p-0 px-5 justify-content-center flex-row-reverse" style="min-height: 500px">
+           <section class="row m-0 p-0  justify-content-center flex-row-reverse" style="min-height: 500px">
 
             <div class="col-lg-5 col-12 my-3">
                 <div class="card border-0" style="min-height: 300px">

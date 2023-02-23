@@ -12,64 +12,85 @@ fetch(`http://ecoach.egy/api/admin/players`)
     data = res.response;
 });
 
+let InputName =document.querySelectorAll("input")[0];
+InputName.focus();
 
 btn.addEventListener("click",(e)=>{
+HandleSearch();
+});
+
+
+function HandleSearch(){
     let Area = document.querySelector("#players-collection");
 
     let InputName =document.querySelectorAll("input")[0].value;
 
     let counter = 0;
 
+    let DefaultImagepath ='/includes/img/bg-section.jpg';
+    
     Area.innerHTML = "";
 
     if(InputName !== ""){
         
     data.forEach(player => {
+
         console.log(player);
+
             if(player.PlayerName.includes(InputName)){
+
                 let PlayerHTML = `
-                <div class="player bg-dark col-12 col-lg-5 p-0  mx-2 my-3 d-flex justify-content-between align-items-center">
-                
-                <div class="player-img w-50 h-100">
-                    <a href="">
-                        <img src="${player.ImagePath == null ? `/includes/img/bg-section.jpg` : `/playerimages/${player.ImagePath}` }" alt="player_photo">
-                    </a>
-                </div>
-                <div class="one-player-data d-flex flex-column justify-content-center align-items-center h-100 w-50 pt-4">
-                    <span class="text-dark bg-warning mb-2 p-2 rounded">${player.Position}</span>
-                    <h4 class="text-warning text-center">${player.PlayerName}</h4>
-                    <h5 class="text-light my-3">
-                        ${player.CategoryName}
-                        <i class="bi bi-person-fill"></i>
-                    </h5>
-                   <div class="d-flex my-2   mt-3">
-                        <h5 class="text-light mx-2">
-                        <i class="bi bi-pass-fill"></i>
-                            PHY : 50
-                        </h5>
-                        <h5 class="text-light mx-2">
-                        <i class="bi bi-pass-fill"></i>
-                             PAS : 50
-                        </h5>
-                   </div>
-                   <div class="d-flex my-2   mb-3">
-                        <h5 class="text-light mx-2">
-                        <i class="bi bi-pass-fill"></i>
-                            SHO : 50
-                        </h5>
-                        <h5 class="text-light mx-2">
-                        <i class="bi bi-pass-fill"></i>
-                             DEF : 50
-                        </h5>
-                   </div>
+               
+                <div class="player d-flex flex-column flex-lg-row bg-dark col-12 col-lg-5 p-0  mx-2 my-3 d-flex justify-content-center align-items-center" style="border-radius:25px">
+                    
+                    <div class="player-img"
+                        style="
+                        background-image: url('${player.ImagePath == null ? DefaultImagepath : `/playerimages/${player.ImagePath}`}');
+                        background-position: center center;
+                        background-size: cover;
+                        min-height: 400px;
+                        height: 100%;
+                        width:100%;
+                        border-radius: 25px ">
 
-                    <a href="/players/${player.id}" class="btn btn-warning mt-3">
-                        ملف اللاعب
-                        <i class="bi bi-skip-start-fill"></i>
+                        <a href="">
+                            <!-- <img src="{{asset('includes/img/bg-section.jpg')}}" style="min-height: 508px" alt="player_photo"> -->  
+                        </a>
+                    </div>
+                    <div class="one-player-data w-100 d-flex flex-column justify-content-center align-items-center h-100 py-4">
+                        <h4 class="text-warning text-center">
+                            ${player.PlayerName}
+                            <i class="bi bi-person-fill"></i>
 
-                    </a>
+                            </h4>
+                        <span class="text-dark bg-warning my-3 p-2 rounded w-25 text-center">
+                            ${player.Position}
+                            <i class="bi bi-person-fill"></i>
+                            </span>
+                        <h5 class="text-light my-2">
+                            السن : ${player.Age}
+                            <i class="bi bi-person-fill"></i>
+                        </h5>
+                        <h5 class="text-light my-2 fs-6">
+                            ${player.CategoryName   }
+                            <i class="bi bi-calendar-week"></i>
+                        </h5>  
+                        <h5 class="text-light my-2 fs-6">
+                            ${player.GroupName}
+                            <i class="bi bi-calendar-week"></i>
+                        </h5>  
+                        <h5 class="text-light my-2">
+                            ${player.BranchName}
+                            <i class="bi bi-calendar-week"></i>
+                        </h5>   
+                    <div id="player-buttons-area" class="row ps-3 flex-row-reverse p-0 m-0 justify-content-center">
+                        <a href="/players/${player.id}" class="btn btn-warning mt-3 col-2" style="height: fit-content; white-space: nowrap; width:fit-content">
+                            ملف اللاعب
+                            <i class="bi bi-skip-start-fill"></i>
+                        </a>
+                        </div>
+                    </div>
                 </div>
-            </div> 
                 
                 `;
                 Area.innerHTML += PlayerHTML ;
@@ -77,13 +98,15 @@ btn.addEventListener("click",(e)=>{
             }
     });
 
-    if(counter > 0){
+        if(counter > 0){
 
-        let Area = document.querySelector("#players-collection");
-        
-        Area.className.includes("d-none") ? Area.classList.remove("d-none") : null; 
+            let Area = document.querySelector("#players-collection");
+            
+            Area.className.includes("d-none") ? Area.classList.remove("d-none") : null;
+            
+            window.scrollBy(0,550);
 
-    }  else {
+        }  else {
 
         Swal.fire({
             icon: "info",
@@ -93,7 +116,20 @@ btn.addEventListener("click",(e)=>{
         })
         Area.className.includes("d-none") ?  null : Area.classList.remove("d-none") ; 
         
-    }
+        } 
+    } else {
+        Swal.fire({
+            icon: "info",
+            title: "لا يوجد بيانات",
+            confirmButtonText: "رجوع",
+             confirmButtonColor: "#e01a22",
+        })
     }
 
+}
+InputName.addEventListener("keydown",(e)=>{
+    if(e.ctrlKey && e.key == "Enter"){
+        HandleSearch();
+    
+    }
 })

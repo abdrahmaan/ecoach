@@ -304,6 +304,7 @@
 
 
                  } else {
+            window.scrollBy(0,550);
 
                 counterHTML.innerHTML = `عدد الحضور : ${counter}`;
                 counterHTML.className.includes("d-none") ? counterHTML.classList.remove("d-none") :null;

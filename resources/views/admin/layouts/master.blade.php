@@ -45,8 +45,6 @@
        <span class="highlight"></span>
        
        
-       
-       
        @if(session()->has('message')){
         <div id="alert" class="bg-success text-center d-flex align-items-center justify-content-center" style="min-height: 90px; margin-top: -23px; transition: 0.3s ease-out">
             <h2 class="text-light">{{session()->get('message')}}</h2>

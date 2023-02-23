@@ -8,7 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="stylesheet" href="{{asset('includes/lib/bootstrap.min.css')}}">
     <!-- Css  -->
+    {{-- <link rel="stylesheet" href="{{asset('includes/custom/css/main.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('includes/home/custom/css/header.css')}}">
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500&display=swap" rel="stylesheet">
     @yield('css')
     <title>@yield('title')</title>
 </head>
@@ -24,7 +29,6 @@
     <script src="{{asset('includes/lib/sweetalert2.all.min.js')}}"></script>  
     <script src="{{asset('includes/home/custom/js/classes.js')}}"></script>
 
- 
 
     @yield('script')
 
@@ -51,6 +55,15 @@
       })
     </script>
     @endif
+
+
+    <style>
+     html, body{
+    overflow-x: hidden !important;
+    width: 100%;
+    height: 100%;
+  }
+    </style>
 
 </body>
 </html>

@@ -99,6 +99,7 @@
 
             // AreaPlayer
             let Area = document.querySelector("#attendance-area");
+            let Area2 = document.querySelector("#players-area");
 
 
             // Filters Checkers
@@ -219,8 +220,6 @@
                  confirmButtonColor: "#e01a22",
             })
                 Area.innerHTML = "";
-                Area.className.includes("d-none") ? null : Area.classList.add("d-none");
-                // counterHTML.className.includes("d-none") ? null : counterHTML.classList.add("d-none");
                 console.log("no Data Found");
                 
                 
@@ -232,6 +231,7 @@
                     </tr>
                     `;
 
+                  window.scrollBy(0,550);
 
                 Area.innerHTML += TotalHTML;
                 Area.className.includes("d-none") ? Area.classList.remove("d-none") : null;

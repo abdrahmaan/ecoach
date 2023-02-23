@@ -32,6 +32,9 @@ header{
     background-image: url("/includes/img/vpattren.png");
 }
 
+body{
+    overflow-x: hidden !important;
+}
 
 .container{
     position: relative;
@@ -136,5 +139,16 @@ header .header-content .nav > li:hover:after{
 
 }
 
+
+@media (min-width: 319px) and (max-width: 769px) {
+    header{
+        min-height: 260px !important;
+    }
+
+    section.header-content{
+        padding: 0px !important;
+    }
+    
+}
 
 
