@@ -56,8 +56,11 @@
     </section>
 
 
-    <div id="Player-Info" class="container"  style="min-height: 300px">
-        <h3 class="text-dark text-end mb-4" dir="rtl">البيانات الشخصية :</h3>
+    <div id="Player-Info" class="container"  style="min-height: 150px">
+        <h3 class="text-dark text-end mb-4" dir="rtl">
+            <i class="bi bi-person-fill text-secondary"></i>
+            البيانات الشخصية :
+        </h3>
         <section class="player-info row">   
         <div class="col-12 col-lg-4">
             <h2 id="player-info" class="bg-dark text-warning text-center align-middle p-3" style="">الوزن : {{$data["Player"]->Weight}} كجم</h2>
@@ -76,7 +79,9 @@
     
     <div id="Player-Skills" class="container  py-4" style="min-height: fit-content">
 
-            <h3 class="text-dark text-end mb-5" dir="rtl">التقييمات المهارية :</h3>
+            <h3 class="text-dark text-end mb-5" dir="rtl">
+            <i class="bi bi-star-fill text-secondary"></i>
+                التقييمات المهارية :</h3>
     
             
     {{-- {{dd($data["Skills"][0]->Skills)}} --}}
@@ -457,6 +462,44 @@
 @endif
 
 
+@if ($data["Player"]->VideoLink !== null)
+        <section id="Player-Video my-5" style="min-height: 500px; margin-top: 40px">
+                <div class="container d-flex flex-column jusify-content-center align-items-center">
+                    <h3 class="align-self-end" dir="rtl">
+                      <i class="bi bi-play-fill text-secondary"></i>
+                        فيديو لـ اللاعب :</h3>
+                        {{-- {{dd(}} --}}
+                    <iframe class="mx-auto mt-4" style="width: 650px; height: 400px;" src="https://www.youtube.com/embed/{{explode("?v=",$data["Player"]->VideoLink)[1]}}">
+                    </iframe>
+                    {{-- <iframe width="560" height="315" src="https://www.youtube.com/embed/BbIJUON-ZTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> --}}
+                </div>
+        </section>
+@endif
+
+@if (session()->get("user-data")->Role !== "Admin")
+
+<section id="about-academy" class="d-flex flex-column justify-content-center align-items-center mt-4" style="min-height: 300px">
+   
+    <h2 class="text-light">- تابعنا بسهولة -</h2>
+    <div class="icons d-flex justify-content-center align-items-center">
+        <a href=""><i id="icon-social"  class="bi bi-facebook mx-3 fs-1 text-light"></i></a>
+        <a href=""><i id="icon-social" class="bi bi-instagram mx-3 fs-1 text-light"></i></a>
+        <a href=""><i id="icon-social" class="bi bi-youtube mx-3 fs-1 text-light"></i></a>
+        <a href=""><i id="icon-social" class="bi bi-whatsapp mx-3 fs-1 text-light"></i></a>
+    </div>
+</section>
+
+
+@else
+
+<a href="/admin/players" class="btn btn-warning text-dark my-4 d-block w-50 mx-auto">
+    الرجوع لـ صفحة اللاعبين
+    <i class="bi bi-person-fill"></i>
+ </a>
+    
+@endif
+
+
 @endsection
 
 
@@ -528,118 +571,132 @@
           border-radius: 80px;
         }
 
-        .progressbar-text {
-      color: black;
-         font-size: 30px !important;
-  }
+        #about-academy{
+            background-image: url("/includes/img/slide-1.jpg");
+            background-position: center center;
+            position: relative;
+            z-index: 1;
 
-  /* Range Style Start */
-  input[type=range] {
-  height: 27px;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
-}
-input[type=range]:focus {
-  outline: none;
-}
-input[type=range]::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000;
-  background: #DCB414;
-  border-radius: 5px;
-  border: 1px solid #000000;
-}
-input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 1px solid #000000;
-  height: 19px;
-  width: 19px;
-  border-radius: 47px;
-  background: #FFFFFF;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -6px;
-}
-input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #DCB414;
-}
-input[type=range]::-moz-range-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  animate: 0.2s;
-  box-shadow: 1px 1px 1px #000000;
-  background: #DCB414;
-  border-radius: 5px;
-  border: 1px solid #000000;
-}
-input[type=range]::-moz-range-thumb {
-  box-shadow: 1px 1px 1px #000000;
-  border: 1px solid #000000;
-  height: 19px;
-  width: 19px;
-  border-radius: 47px;
-  background: #FFFFFF;
-  cursor: pointer;
-}
-input[type=range]::-ms-track {
-  width: 100%;
-  height: 9px;
-  cursor: pointer;
-  animate: 0.2s;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-input[type=range]::-ms-fill-lower {
-  background: #DCB414;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #000000;
-}
-input[type=range]::-ms-fill-upper {
-  background: #DCB414;
-  border: 1px solid #000000;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #000000;
-}
-input[type=range]::-ms-thumb {
-  margin-top: 1px;
-  box-shadow: 1px 1px 1px #000000;
-  border: 1px solid #000000;
-  height: 19px;
-  width: 19px;
-  border-radius: 47px;
-  background: #FFFFFF;
-  cursor: pointer;
-}
-input[type=range]:focus::-ms-fill-lower {
-  background: #DCB414;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #DCB414;
-}
+        }
+        #about-academy::before{
+            content: "";
+            background-color: rgba(0, 0, 0, 0.64);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: -1;
 
-  /* Range Style End  */
+        }
+      
+
+        /* Range Style Start */
+        input[type=range] {
+        height: 27px;
+        -webkit-appearance: none;
+        margin: 10px 0;
+        width: 100%;
+        }
+        input[type=range]:focus {
+        outline: none;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+        width: 100%;
+        height: 9px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 1px 1px 1px #000000;
+        background: #DCB414;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        }
+        input[type=range]::-webkit-slider-thumb {
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 19px;
+        width: 19px;
+        border-radius: 47px;
+        background: #FFFFFF;
+        cursor: pointer;
+        -webkit-appearance: none;
+        margin-top: -6px;
+        }
+        input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #DCB414;
+        }
+        input[type=range]::-moz-range-track {
+        width: 100%;
+        height: 9px;
+        cursor: pointer;
+        animate: 0.2s;
+        box-shadow: 1px 1px 1px #000000;
+        background: #DCB414;
+        border-radius: 5px;
+        border: 1px solid #000000;
+        }
+        input[type=range]::-moz-range-thumb {
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 19px;
+        width: 19px;
+        border-radius: 47px;
+        background: #FFFFFF;
+        cursor: pointer;
+        }
+        input[type=range]::-ms-track {
+        width: 100%;
+        height: 9px;
+        cursor: pointer;
+        animate: 0.2s;
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+        }
+        input[type=range]::-ms-fill-lower {
+        background: #DCB414;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px #000000;
+        }
+        input[type=range]::-ms-fill-upper {
+        background: #DCB414;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px #000000;
+        }
+        input[type=range]::-ms-thumb {
+        margin-top: 1px;
+        box-shadow: 1px 1px 1px #000000;
+        border: 1px solid #000000;
+        height: 19px;
+        width: 19px;
+        border-radius: 47px;
+        background: #FFFFFF;
+        cursor: pointer;
+        }
+        input[type=range]:focus::-ms-fill-lower {
+        background: #DCB414;
+        }
+        input[type=range]:focus::-ms-fill-upper {
+        background: #DCB414;
+        }
+
+        /* Range Style End  */
 
 
-  .accordion-button:not(.collapsed){
-    background-color: #7e180f !important;
-}
+        .accordion-button:not(.collapsed){
+            background-color: #7e180f !important;
+        }
 
-.accordion-item:last-of-type .accordion-button.collapsed{
-    background-color: #212529 !important;
-}
+        .accordion-item:last-of-type .accordion-button.collapsed{
+            background-color: #212529 !important;
+        }
 
-        @media (min-width   :319px) and (max-width: 719px){
+        @media (min-width: 319px) and (max-width: 719px){
 
             section.player-data{
             width: 320px;
-  
+
         }
         }
     </style>

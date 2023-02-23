@@ -56,7 +56,7 @@ class PlayerController extends Controller
             "GroupName" => 'required',
             "BranchName" => 'required',
             "CategoryName" => 'required',
-            "VideoLink" =>'nullable|regex:/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/',
+            "VideoLink" =>'nullable',
         ],
         [
            
@@ -92,6 +92,7 @@ class PlayerController extends Controller
 
             $file->move(public_path('playerimages'),$fileName); 
 
+
             Player::create([
                 "PlayerName" => $request->PlayerName,
                 "Age" => $request->Age,
@@ -120,6 +121,8 @@ class PlayerController extends Controller
 
         return redirect("/admin/players/create")->with("message","تم إضافة اللاعب بنجاح");
         } else {
+
+    
 
         Player::create([
             "PlayerName" => $request->PlayerName,
@@ -167,6 +170,19 @@ class PlayerController extends Controller
 
     }
 
+
+    public function showPlayerToUser($id){
+        $PlayerData = Player::where("id",$id)->get()->first();
+        $PlayerSkill = Skill::where("PlayerCode",$id)->get()->all();
+
+        $passData = [
+            'Player' =>$PlayerData,
+            "Skills"=> $PlayerSkill
+        ];
+
+        return view("player.show")->with('data',$passData);
+    }
+
     public function edit($id) 
     {
         $GroupsName = Group::all();
@@ -198,7 +214,7 @@ class PlayerController extends Controller
             "GroupName" => 'required',
             "BranchName" => 'required',
             "CategoryName" => 'required',
-            "VideoLink" =>'nullable|regex:/^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/',
+            "VideoLink" =>'nullable',
         ],
         [
            
