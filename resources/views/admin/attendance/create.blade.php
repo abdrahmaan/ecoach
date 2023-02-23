@@ -332,6 +332,7 @@
                  } else {
 
                 HandleCheckBox();
+            window.scrollBy(0,550);
 
                 counterHTML.innerHTML = `عدد اللاعبين : ${counter}`;
                 counterHTML.className.includes("d-none") ? counterHTML.classList.remove("d-none") :null;

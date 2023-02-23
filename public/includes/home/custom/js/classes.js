@@ -1,5 +1,11 @@
 class  Utilites {
+
     header(){
+
+        let facebook = "https://facebook.com/bedoohamdy";
+        let whatsapp = "https://wa.me/+201110645479";
+        let youtube = "https://youtube.com/";
+        let instagram = "https://instagram.com/";
 
         let header = `
                     <header>
@@ -12,22 +18,25 @@ class  Utilites {
                             </a>
                             
                             <div class="icon d-flex">
-                                <a href="">
+                                <a href="${facebook}" target="_blank">
                                     <i class="bi bi-facebook text-light px-2"></i>
                                 </a>
-                                <a href="">
+                                <a href="${instagram}" target="_blank">
                                     <i class="bi bi-instagram text-light px-2"></i>
                                 </a>
-                                <a href="">
+                                <a href="${whatsapp}" target="_blank">
                                     <i class="bi bi-whatsapp text-light px-2"></i>
+                                </a>
+                                <a href="${youtube}" target="_blank">
+                                    <i class="bi bi-youtube text-light px-2"></i>
                                 </a>
                             </div>
                     
 
                         </section>
                         <hr class="bg-light">
-                        <section class="header-content flex-column d-flex justify-content-center align-items-center ">
-                            <h2 class="text-warning fs-1 pb-2">E-Coach</h2>
+                        <section class="header-content flex-column flex-lg-row-reverse d-flex justify-content-between px-5  align-items-center" style="min-height: 135px">
+                            <img class="my-3" src="/includes/img/logo.png" alt="logo" style="width: 100px">
                             <ul class="nav d-flex flex-row-reverse">
                                 <li id="home" class="active px-4 my-3 fs-5"><a href="/home">
                                     الرئيسية

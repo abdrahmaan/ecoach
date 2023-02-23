@@ -11,6 +11,10 @@ header h3.title{
     transform: translate(-50%,-50%);
 }
 
+html{
+    overflow-x: hidden !important;
+}
+
 @media (min-width: 319px) and (max-width: 567px) {
 
 
@@ -19,5 +23,8 @@ header h3.title{
         font-size: 17px;
     }
     
+    header{
+        min-height: 260px !important;
+    }
     
 }

@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 
-@section('title',"ملف اللاعب")
+@section('title',env("APP_NAME") . " | ملف اللاعب")
 @section('icon',"bi bi-person-fill")
 
 @section('content')
@@ -482,10 +482,10 @@
    
     <h2 class="text-light">- تابعنا بسهولة -</h2>
     <div class="icons d-flex justify-content-center align-items-center">
-        <a href=""><i id="icon-social"  class="bi bi-facebook mx-3 fs-1 text-light"></i></a>
-        <a href=""><i id="icon-social" class="bi bi-instagram mx-3 fs-1 text-light"></i></a>
-        <a href=""><i id="icon-social" class="bi bi-youtube mx-3 fs-1 text-light"></i></a>
-        <a href=""><i id="icon-social" class="bi bi-whatsapp mx-3 fs-1 text-light"></i></a>
+        <a href="{{env("FACEBOOK")}}" target="_blank"><i id="icon-social"   class="bi bi-facebook mx-3 fs-1 text-light"></i></a>
+        <a href="{{env("INSTAGRAM")}}" target="_blank"><i id="icon-social"  class="bi bi-instagram mx-3 fs-1 text-light"></i></a>
+        <a href="{{env("YOUTUBE")}}" target="_blank"><i id="icon-social"  class="bi bi-youtube mx-3 fs-1 text-light"></i></a>
+        <a href="{{env("WHATSAPP")}}" target="_blank"><i id="icon-social"  class="bi bi-whatsapp mx-3 fs-1 text-light"></i></a>
     </div>
 </section>
 
@@ -505,6 +505,8 @@
 
 
 @section('css')
+
+<link rel="stylesheet" href="/includes/custom/css/playerprofile.css">
 
     <style>
 

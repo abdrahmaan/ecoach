@@ -486,6 +486,9 @@
                  confirmButtonColor: "#e01a22",
             })
             console.log("no Data Found");
+            } else {
+            window.scrollBy(0,550);
+
             }
 
 

@@ -505,7 +505,7 @@
 
 
 @section('css')
-
+<link rel="stylesheet" href="/includes/custom/css/playerprofile.css">
     <style>
 
         body{
@@ -706,60 +706,5 @@
 
 @section('script')
 
-<script type="text/javascript" src="/includes/lib/progressbar.js"></script>
-
-<script>
- var circle_badany_tahamol_ada2 = new ProgressBar.Circle('#badany-tahamol-ada2', {
-    color: '#a21d14',
-    strokeWidth: 3,
-    trailWidth: 1,
-    text: {
-        value: '50%'
-    },
-    style: {
-        width: "100px"
-    }
-});
- var circle_badany_tahamol_3am= new ProgressBar.Circle('#badany-tahamol-3am', {
-    color: '#a21d14',
-    strokeWidth: 3,
-    trailWidth: 1,
-    text: {
-        value: '50%'
-    },
-
-});
- var circle_badany_tahamol_qowa = new ProgressBar.Circle('#badany-tahamol-qowa', {
-    color: '#a21d14',
-    strokeWidth: 3,
-    trailWidth: 1,
-    text: {
-        value: '50%'
-    },
-    style: {
-        width: "100px"
-    }
-});
- var circle_badany_tahamol_sor3a = new ProgressBar.Circle('#badany-tahamol-sor3a    ', {
-    color: '#a21d14',
-    strokeWidth: 3,
-    trailWidth: 1,
-    text: {
-        value: '50%'
-    },
-    style: {
-        width: "100px"
-    }
-});
-
-
-array = [circle_badany_tahamol_3am,circle_badany_tahamol_ada2,circle_badany_tahamol_qowa,circle_badany_tahamol_sor3a]
-
-array.forEach(circ => {
-
-circ.animate(0.8,{duration: 800})
-    
-});
-</script>
 @endsection
 

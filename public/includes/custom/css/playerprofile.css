@@ -1,0 +1,12 @@
+ /* Player Profile Responsive */
+
+
+
+@media (min-width: 319px) and (max-width: 767px) {
+
+    iframe {
+        width: 300px !important;
+    }
+
+}
+ 

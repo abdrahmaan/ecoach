@@ -18,7 +18,7 @@
         <img src="/includes/img/wave.svg" alt="wave">
     </section>
 
-    <section class="players-data container">
+    <section class="players-data container" style="min-height: 450px">
         <section class="search-player d-flex flex-column justify-content-center align-items-center">
             <h3 class="mb-3">
                 إبحث عن لاعب
@@ -29,7 +29,7 @@
         </section>
 
 
-        <section id="players-collection" class="players-collection d-none row p-0 m-0 justify-content-center mt-5">
+        <section id="players-collection" class="players-collection d-none row p-0 m-0 justify-content-center mt-5" style="">
 
             <div class="player bg-dark col-12 col-lg-5 p-0  mx-2 my-3 d-flex justify-content-between align-items-center">
                 
@@ -237,7 +237,7 @@
 
 
                 .dropdown-divider{
-                    background-color: yellow;
+                    background-color: #ffb21b;
                     margin-top: 35px;
                     width: 20px;
                     margin: 15px auto;
