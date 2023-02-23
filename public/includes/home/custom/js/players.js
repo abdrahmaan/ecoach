@@ -63,7 +63,7 @@ btn.addEventListener("click",(e)=>{
                         </h5>
                    </div>
 
-                    <a href="/admin/players/${player.id}" class="btn btn-warning mt-3">
+                    <a href="/players/${player.id}" class="btn btn-warning mt-3">
                         ملف اللاعب
                         <i class="bi bi-skip-start-fill"></i>
 

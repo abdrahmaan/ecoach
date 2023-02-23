@@ -15,7 +15,7 @@
         <h2 class="text-light">أمهر اللاعبين لدينا</h2>
         <div class="dropdown-divider"></div>
         <span class="highlight"></span>
-        <img src="includes/img/wave.svg" alt="wave">
+        <img src="/includes/img/wave.svg" alt="wave">
     </section>
 
     <section class="players-data container">
