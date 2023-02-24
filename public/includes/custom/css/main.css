@@ -7,8 +7,8 @@
 }
 
 html{
-    overflow-x: hidden;
-}
+        overflow-x: hidden;
+    }
 label,h1,h2,h3,h4,h5,h6{
     margin: 0px !important;
     padding: 0px !important;
@@ -25,9 +25,14 @@ body{
     
 }
 
+.accordion-button{
+
+    box-shadow: 0px 0px 0px 0px transparent !important;
+}
 
 .accordion-button:not(.collapsed){
-    background-color: black !important;
+    background-color: #ffbe00 !important;
+    box-shadow: 0px 0px 0px 0px transparent !important;
 }
 
 @media (min-width:760px) {
