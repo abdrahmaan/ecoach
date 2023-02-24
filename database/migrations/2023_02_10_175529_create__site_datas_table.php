@@ -13,7 +13,7 @@ class CreateSiteDatasTable extends Migration
      */
     public function up()
     {
-        Schema::create('_site_datas', function (Blueprint $table) {
+        Schema::create('site_datas', function (Blueprint $table) {
             $table->id();
             $table->string('Name');
             $table->integer('Value');

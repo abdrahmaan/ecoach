@@ -59,6 +59,18 @@
       }
       @endif
 
+      @if(session()->has('error'))
+      <script>
+        Swal.fire({
+          icon: "error",
+          title: "! تنبيه",
+          text: '{{session()->get("error")}}',
+           confirmButtonText: "رجوع",
+           confirmButtonColor: "#e01a22",
+        })
+      </script>
+      @endif
+
       @if($errors->any())
        <script>
          Swal.fire({
