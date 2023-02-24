@@ -58,11 +58,6 @@
 
 
     <style>
-     html, body{
-    overflow-x: hidden !important;
-    width: 100%;
-    height: 100%;
-  }
     </style>
 
 </body>
