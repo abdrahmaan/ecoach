@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use Illuminate\Console\Scheduling\Schedule;
 
 use App\Models\Auth;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class AuthController extends Controller
         return view("auth.index");
     }
 
-    public function LoginLogic(Request $request)
+    public function LoginLogic(Request $request,Schedule $schedule)
     {   
 
         $request->validate([
@@ -35,7 +36,10 @@ class AuthController extends Controller
 
           $request->session()->put('user-data', $user);
           
-          
+           
+            $schedule->command('site:status')
+            ->everyMinute();
+                    
           switch ($user->Role) {
               case 'Admin':
 

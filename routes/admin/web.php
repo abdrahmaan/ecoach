@@ -25,7 +25,7 @@ Route::prefix("admin")->middleware('auth')->group(function (){
 
 
     // Captin Routes Access
-    Route::middleware('captin')->group(function(){
+    Route::middleware(['captin','site-status'])->group(function(){
 
         // Attendance
         Route::resource('attendances', 'App\Http\Controllers\Admin\AttendanceController');
@@ -35,7 +35,7 @@ Route::prefix("admin")->middleware('auth')->group(function (){
     });
 
     // Accountant Routes Access
-    Route::middleware('accountant')->group(function(){
+    Route::middleware(['accountant','site-status'])->group(function(){
         
         Route::resource('payments', 'App\Http\Controllers\Admin\PaymentController');
         Route::get('payments/create/{id}', 'App\Http\Controllers\Admin\PaymentController@create');
@@ -50,22 +50,25 @@ Route::prefix("admin")->middleware('auth')->group(function (){
         Route::get('/', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard.index');
         Route::get('dashboard', 'App\Http\Controllers\Admin\DashboardController@index')->name('dashboard.index');
 
-        // Players
-        Route::resource('players', 'App\Http\Controllers\Admin\PlayerController');
-        Route::get('toggleactive/{type}/{id}', 'App\Http\Controllers\Admin\PlayerController@ToggleActivePlayer');
-        // Groups
-        Route::resource('groups', 'App\Http\Controllers\Admin\GroupController');
-        // Branches
-        Route::resource('branches', 'App\Http\Controllers\Admin\BranchController');
-        Route::post('branches', 'App\Http\Controllers\Admin\BranchController@store');
-        // Skills
-        Route::resource('skills', 'App\Http\Controllers\Admin\SkillController');
-        Route::get('skills/create/{id}', 'App\Http\Controllers\Admin\SkillController@create');
-        
-        // New User
-        Route::get("/newuser", [AuthController::class, "NewUserPage"]);
-        Route::post("/newuser", [AuthController::class, "NewUserLogic"]);
-        Route::post("/deleteuser/{id}", [AuthController::class, "DeleteUserLogic"]);
+        Route::middleware('site-status')->group(function () {
+             // Players
+            Route::resource('players', 'App\Http\Controllers\Admin\PlayerController');
+            Route::get('toggleactive/{type}/{id}', 'App\Http\Controllers\Admin\PlayerController@ToggleActivePlayer');
+            // Groups
+            Route::resource('groups', 'App\Http\Controllers\Admin\GroupController');
+            // Branches
+            Route::resource('branches', 'App\Http\Controllers\Admin\BranchController');
+            Route::post('branches', 'App\Http\Controllers\Admin\BranchController@store');
+            // Skills
+            Route::resource('skills', 'App\Http\Controllers\Admin\SkillController');
+            Route::get('skills/create/{id}', 'App\Http\Controllers\Admin\SkillController@create');
+            
+            // New User
+            Route::get("/newuser", [AuthController::class, "NewUserPage"]);
+            Route::post("/newuser", [AuthController::class, "NewUserLogic"]);
+            Route::post("/deleteuser/{id}", [AuthController::class, "DeleteUserLogic"]);
+        });
+       
     });
 
    

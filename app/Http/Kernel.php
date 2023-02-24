@@ -59,6 +59,7 @@ class Kernel extends HttpKernel
         'captin' => \App\Http\Middleware\Captin::class,
         'accountant' => \App\Http\Middleware\Accountant::class,
         'just-admin' => \App\Http\Middleware\JustAdmin::class,
+        'site-status' => \App\Http\Middleware\SiteStatus::class,
         'no-cache' => \App\Http\Middleware\NoCache::class,
         'old-auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,

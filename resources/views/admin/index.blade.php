@@ -232,8 +232,6 @@
     
             </div>
             
-
-
            <style>
                section.one-data{
                    border-radius: 20px;
